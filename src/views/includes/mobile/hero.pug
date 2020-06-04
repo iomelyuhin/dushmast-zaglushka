@@ -1,0 +1,21 @@
+include ../../common/mixins.pug
+
+section.hero
+	.hero__container.container
+		.hero__text-content
+			h1.hero__title Smart Call Recording
+			.hero__desc.desc Record calls and transcription of recordings into the text with a search feature
+			.hero__buttons
+				.hero__btn
+					+appleBtn(hero)
+				.hero__btn
+					+recBtn(hero)
+		.hero__image
+			.hero__image-wrap
+				+image("content/main-hero", "png", "hero__image-img animate__animated animate__fadeInBottomLeft")
+				.hero__image-circle.hero__image-circle--violet.animate__animated.animate__zoomIn
+				.hero__image-circle.hero__image-circle--yellow.animate__animated.animate__zoomIn
+				.hero__image-circle.hero__image-circle--green.animate__animated.animate__zoomIn
+				.hero__image-figure.animate__animated.animate__zoomIn
+
+				

@@ -1,0 +1,12 @@
+extends ../common/layout
+
+block variables
+	-var title = "Smart Call Recording For Mobile"
+
+block content
+	include ../includes/mobile/hero.pug
+	include ../includes/mobile/functions.pug
+	include ../includes/mobile/features.pug
+
+block scripts
+	script(src="/assets/js/mobile.min.js")

@@ -1,0 +1,29 @@
+include ../common/mixins.pug
+
+block variables
+
+doctype html
+html(lang="ru")
+	block head
+		head
+			meta(charset="utf-8")
+			title REKK | #{title}
+			meta(content="width=device-width, initial-scale=1" name="viewport")
+			meta(content="ie=edge" http-equiv="x-ua-compatible")
+			link(rel="stylesheet" href="/assets/css/style.css")
+			//- // Global site tag (gtag.js) - Google Analytics
+			//- script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-145151725-3')
+			//- script.
+			//- 	window.dataLayer = window.dataLayer || [];
+			//- 	function gtag(){dataLayer.push(arguments);}
+			//- 	gtag('js', new Date());
+			//- 	gtag('config', 'UA-145151725-3');
+	body
+		.wrapper
+			.maincontent
+				include ./header.pug
+				block content
+				include ./footer.pug
+
+		script(src="/assets/js/main.min.js")
+		block scripts

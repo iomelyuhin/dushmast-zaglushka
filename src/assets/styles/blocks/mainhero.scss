@@ -1,0 +1,113 @@
+.mainhero {
+  padding: 125px 0 165px 0;
+}
+
+.mainhero__title {
+  text-align: center;
+}
+
+.mainhero__desc {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: flex;
+    width: 28px;
+    height: 28px;
+    background-image: url("/assets/img/content/star.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+  }
+}
+
+.mainhero__list {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mainhero__item {
+  width: 30%;
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 80px 50px 55px 50px;
+  overflow: hidden;
+
+  &:first-child {
+    background: url("/assets/img/icons/rekk-mobile.svg") no-repeat 57% 0,
+      $blue-violet-gr;
+    border: 1px solid #e3e3e3;
+  }
+
+  &:nth-child(2) {
+    background: url("/assets/img/icons/rekk-pc.svg") no-repeat -50% 85px,
+      $black-gr;
+    border: 1px solid #eaebf0;
+  }
+  &:nth-child(3) {
+    background: url("/assets/img/icons/rekk-second.svg") no-repeat 63% -52px,
+      $w-gr;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.12);
+    .mainhero__item-title {
+      color: $b;
+    }
+
+		.mainhero__item-item {
+			color: $b;
+			&::before {
+				background: url("/assets/img/icons/point-black.svg") center center
+					no-repeat;
+			}
+		}
+  }
+}
+
+.mainhero__item-title {
+  color: $w;
+	font-size: 28px;
+	margin-bottom: 35px;
+}
+
+.mainhero__item-item {
+  color: $w;
+  font-family: $roboto;
+  font-size: 17px;
+  display: flex;
+	align-items: center;
+	padding-bottom: 15px;
+
+  &::before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background: url("/assets/img/icons/point-white.svg") center center no-repeat;
+    display: flex;
+    margin-right: 10px;
+    font-weight: $bold;
+  }
+}
+
+.mainhero__item-link {
+	padding: 20px 23px;
+	text-transform: uppercase;
+	background-repeat: 10px;
+	color: #393939;
+	font-family: $proxima;
+	background-color: $w;
+	border-radius: 10px;
+	font-weight: $semi;
+	transition: $norm;
+
+	&:hover {
+		background-color: rgba($w, 0.8);
+	}
+}

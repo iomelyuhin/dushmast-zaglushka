@@ -1,0 +1,23 @@
+mixin icon(name, mod)
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="/assets/img/sprite.svg#" + name)
+
+mixin appleBtn (mod)
+	button.apple-btn(class=`apple-btn--${mod}` type="button")
+		+icon("apple", "apple-btn__icon")
+		.apple-btn__text Download on the appstore
+mixin pcBtn (mod)
+	button.pc-btn(class=`pc-btn--${mod}` type="button")
+		+icon("win", "pc-btn__icon")
+		.pc-btn__text Download for PC
+mixin recBtn (mod)
+	.rec-btn(class=`rec-btn--${mod}`)
+		button.rec-btn__btn(type="button")
+			+icon("mic", "rec-btn__icon")
+			.rec-btn__text Recording without an app
+		.rec-btn__desc For Android, iOs, MacOs, Windows etc.
+
+mixin image (imgPath, ext, mod)
+	picture
+		source(srcset=`/assets/img/${imgPath}.webp` type="image/webp")
+		img(class=mod src=`/assets/img/${imgPath}.${ext}`)

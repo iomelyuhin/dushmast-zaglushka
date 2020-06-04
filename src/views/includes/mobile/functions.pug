@@ -1,0 +1,45 @@
+-
+	var funcList = [
+		{
+			img: "func-01",
+			title: "Call recording",
+			desc: "Recording of incoming and outgoing call."
+		},
+		{
+			img: "func-02",
+			title: "Hear tracks",
+			desc: "Recording of incoming and outgoing call."
+		},
+		{
+			img: "func-03",
+			title: "Edit tracks",
+			desc: "Recording of incoming and outgoing call."
+		},
+		{
+			img: "func-04",
+			title: "Transition recirding into text",
+			desc: "Recording of incoming and outgoing call."
+		},
+		{
+			img: "func-05",
+			title: "Contact managment",
+			desc: "Recording of incoming and outgoing call."
+		},
+		{
+			img: "func-06",
+			title: "Easy settings",
+			desc: "Recording of incoming and outgoing call."
+		}
+	]
+
+section.functions
+	.functions__container.container
+		h2.functions__title Functions
+		ul.functions__list
+			each item in funcList
+				li.functions__item
+					.functions__item-image
+						+image(`content/${item.img}`, "png", "functions__item-img")
+						//- img.functions__item-img(src=`/assets/img/content/${item.img}`)
+					.functions__item-title=item.title
+					.functions__item-desc=item.desc

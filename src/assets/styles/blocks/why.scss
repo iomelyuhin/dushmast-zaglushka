@@ -1,0 +1,102 @@
+.why {
+	padding-bottom: 150px;
+}
+.why__title {
+  text-align: center;
+}
+
+.why__list {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.why__item {
+	width: 30%;
+	margin-bottom: 45px;
+  &:first-child {
+    .why__item-icon {
+      background-color: rgba(#baa5ff, 0.16);
+    }
+  }
+  &:nth-child(2) {
+    .why__item-icon {
+      background-color: rgba(#241c87, 0.1);
+    }
+  }
+  &:nth-child(3) {
+    .why__item-icon {
+      background-color: rgba(#37b4fb, 0.1);
+    }
+  }
+  &:nth-child(4) {
+    .why__item-icon {
+      background-color: rgba(#ffe669, 0.2);
+    }
+  }
+  &:nth-child(5) {
+    .why__item-icon {
+      background-color: rgba(#fd8a3f, 0.14);
+    }
+  }
+  &:last-child {
+    .why__item-icon {
+      background-color: rgba(#baa5ff, 0.16);
+    }
+  }
+}
+
+.why__item-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.why__item-icon-pic--wallet {
+	width: 40px;
+	height: 36px;
+	stroke: #8051E5;
+	fill: none;
+}
+.why__item-icon-pic--secure {
+	width: 40px;
+	height: 36px;
+	stroke: #241C87;
+	fill: none;
+}
+.why__item-icon-pic--speed {
+	width: 40px;
+	height: 36px;
+	stroke: #37B4FB;
+	fill: none;
+}
+.why__item-icon-pic--cloud {
+	width: 40px;
+	height: 36px;
+	stroke: #FFD60C;
+	fill: none;
+}
+.why__item-icon-pic--rocket-up {
+	width: 40px;
+	height: 36px;
+	stroke: #FD8A3F;
+	fill: none;
+}
+.why__item-icon-pic--support {
+	width: 40px;
+	height: 36px;
+	stroke: #8051E5;
+	fill: none;
+}
+
+.why__item-title {
+	margin-top: 30px;
+}
+
+.why__item-desc {
+	margin-top: 20px;
+}

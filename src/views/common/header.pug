@@ -1,0 +1,43 @@
+include ../common/mixins.pug
+
+header.header
+	.container.container--header
+		.header__content
+			a.header__logo(href="/")
+				img.header__logo-img(src="/assets/img/content/logo.png")
+			nav.header__navigation
+				ul.header__main-menu
+					li.header__main-menu-item
+						a.header__main-menu-item-link(href="/mobile.html") For mobile
+					li.header__main-menu-item
+						a.header__main-menu-item-link(href="/desktop.html") For desktop
+					li.header__main-menu-item
+						a.header__main-menu-item-link(href="/second") Second number
+					li.header__main-menu-item
+						button.header__main-menu-item-link.header__main-menu-item-link--submenu(type="button") Information
+						ul.submenu
+							li.submenu__item
+								a.submenu__item-link(href="/privacy") Privacy Policy
+							li.submenu__item
+								a.submenu__item-link(href="/faq") FAQ
+							li.submenu__item
+								a.submenu__item-link(href="/terms") Terms and Conditions
+					li.header__main-menu-item
+						button.header__main-menu-item-link(type="button") Contact
+				.header__user-menu
+					.header__user-menu-langs.header__user-menu-langs--langs
+						button.langs__btn(type="button") En
+						ul.langs__list
+							li.langs__item
+								a.langs__item-link(href="/en" data-lang="En") En
+							li.langs__item
+								a.langs__item-link(href="/it" data-lang="It") It
+							li.langs__item
+								a.langs__item-link(href="/fr" data-lang="Fr") Fr
+					a.header__user-menu-login(href="https://dashboard.rekk.io/login")
+						+icon("user", "header__user-menu-login-icon")
+						.header__user-menu-login-text Login
+			//- hamburger-menu
+			button.hamburger.hamburger--collapse(type="button" aria-label="navigation-menu")
+				span.hamburger-box
+					span.hamburger-inner

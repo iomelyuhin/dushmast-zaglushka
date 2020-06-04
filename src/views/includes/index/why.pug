@@ -1,0 +1,44 @@
+-
+	var whyList = [
+		{
+			icon: "wallet",
+			title: "Simple, Upfront Pricing",
+			desc: "Transparent pricing so you know the cost before purchasing."
+		},
+		{
+			icon: "secure",
+			title: "Secure Online Ordering",
+			desc: "Your content is protected. Our vetted workforce only uses secure tools."
+		},
+		{
+			icon: "speed",
+			title: "Speedy Delivery",
+			desc: "Round-the-clock service to serve you best."
+		},
+		{
+			icon: "cloud",
+			title: "Cloud solution",
+			desc: "Professional freelance transcriptionists, captioners, and translators who are vetted for quality."
+		},
+		{
+			icon: "rocket-up",
+			title: "Powerful Technology",
+			desc: "Our powerful software platform makes it easy to deliver high-quality results quickly."
+		},
+		{
+			icon: "support",
+			title: "Support and Customer Service",
+			desc: "U.S.-based team available 24/7. Reach out to us at any time."
+		}
+	]
+
+section.why
+	.why__container.container
+		h2.why__title Почему REKK?
+		ul.why__list
+			each item in whyList
+				li.why__item
+					.why__item-icon
+						+icon(item.icon, `why__item-icon-pic why__item-icon-pic--${item.icon}`)
+					h3.why__item-title=item.title
+					.why__item-desc.desc=item.desc

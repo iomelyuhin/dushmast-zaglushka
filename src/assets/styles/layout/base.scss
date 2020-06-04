@@ -1,0 +1,101 @@
+// @import "../../local_modules/normalize.css/normalize";
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  color: $b;
+
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    font-size: 12px;
+  }
+}
+
+body {
+  margin: 0;
+  // opacity: 0;
+  transition: $norm;
+  // transform: translateY(-20px);
+}
+.body-visible {
+  // transform: translateY(0);
+  opacity: 1;
+}
+
+img {
+  max-width: 100%;
+  // max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+ul {
+	list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+	outline: none;
+	border: none;
+	background: none;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+}
+
+// section {
+//   padding: 180px 0;
+//   @include tablets {
+//     // padding
+//   }
+//   @include phones {
+//     padding: 100px 0;
+//   }
+// }
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+}
+
+.maincontent {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: space-between;
+}
+
+header {
+	max-height: 80px;
+}
+
+footer {
+	max-height: 390px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 95%;
+  position: relative;
+  max-width: 1480px;
+  @include phones {
+    width: 90%;
+  }
+}
+
+
+
