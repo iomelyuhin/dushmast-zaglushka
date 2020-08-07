@@ -15,8 +15,13 @@
 .why__item {
 	width: 30%;
 	margin-bottom: 45px;
+
+	@include tablets {
+		width: 45%;
+	}
   &:first-child {
     .why__item-icon {
+
       background-color: rgba(#baa5ff, 0.16);
     }
   }
@@ -44,7 +49,22 @@
     .why__item-icon {
       background-color: rgba(#baa5ff, 0.16);
     }
-  }
+	}
+	
+	@include phones {
+		width: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.why__item-icon-pic--micro {
+	width: 40px;
+	height: 36px;
+	fill: $violet;
+	stroke: none;
 }
 
 .why__item-icon {

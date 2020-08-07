@@ -1,16 +1,40 @@
 .hamburger {
   display: none;
+
+  @include tablets-hor {
+    display: block;
+  }
+
+  &.is-active {
+    position: fixed;
+    top: 8px;
+    right: 25px;
+    z-index: 13;
+  }
 }
 
 .header {
-  padding: 20px 0;
-  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  box-shadow: 0 0.25rem 2.5rem rgba(0, 0, 0, 0.1);
+  height: 5rem;
+  width: 100%;
+  top: 0;
+  z-index: 14;
+  left: 0;
+  background: #fff;
+}
+
+.container--header {
+  height: 100%;
 }
 
 .header__content {
+  // padding: 20px 0;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
 }
 
 .header__navigation,
@@ -21,29 +45,297 @@
   align-items: center;
 }
 
-.submenu,
-.langs__list {
-  display: none;
+.header__navigation {
+	width: 100%;
+	margin-left: 45px;
+  @include tablets-hor {
+		margin-left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: -150%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $w;
+    z-index: 12;
+    align-items: flex-start;
+    transition: left $norm;
+    // padding: 15px;
+
+    &.active {
+      left: 0;
+    }
+  }
 }
 
+.header__main-menu {
+  justify-content: space-around;
+  width: 100%;
+  @include tablets-hor {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+// подменю
+.submenu,
+.langs__list {
+  // display: none;
+  position: absolute;
+  background-color: #fff;
+  z-index: 11;
+  left: 0;
+  border-radius: 0 6px 6px 6px;
+  box-sizing: border-box;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.submenu {
+  width: 145%;
+  overflow: hidden;
+  top: 39px;
+  max-height: 0;
+  opacity: 0;
+  border: 1px solid transparent;
+
+  @include tablets-hor {
+    position: relative;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    z-index: initial;
+  }
+}
+
+.submenu__item {
+  padding: 10px 0;
+
+  @include tablets-hor {
+    // margin: 0 15px;
+    padding: 15px 0;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.header__main-menu-item--title {
+  display: none;
+  @include tablets-hor {
+    display: block;
+    font-family: $proxima;
+    font-weight: 800;
+    font-size: 19px;
+    color: $violet;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.submenu__item-link {
+  font-family: $roboto;
+  font-size: 16px;
+  color: $text-menu;
+}
+
+.langs__list {
+  overflow: hidden;
+  top: 39px;
+  max-height: 0;
+  opacity: 0;
+  border: 1px solid transparent;
+
+  @include tablets-hor {
+    position: relative;
+    padding: 0;
+    top: 0;
+    background-color: transparent;
+  }
+}
+
+.header__user-menu-langs--langs {
+  position: relative;
+
+  @include tablets-hor {
+    width: 100%;
+  }
+
+  &.active {
+    .langs__btn {
+      border-radius: 6px 6px 0 0;
+      border: 1px solid #ededed;
+      transition: border-color $norm;
+      border-bottom: none;
+      align-items: center;
+
+      &::after {
+        transition: $norm;
+        transform: rotate(180deg);
+
+        @include tablets-hor {
+          transform: rotate(0);
+        }
+      }
+    }
+    .langs__list {
+      opacity: 1;
+      border: 1px solid #ededed;
+      padding: 20px;
+
+      transition: max-height $norm;
+      max-height: 300px;
+
+      @include tablets-hor {
+        padding: 20px;
+      }
+    }
+  }
+}
+
+.langs__item {
+  padding: 10px 0;
+}
+
+.langs__item-link {
+  font-family: $roboto;
+  font-size: 16px;
+  color: $text-menu;
+  display: flex;
+
+  &::before {
+    content: "";
+    display: flex;
+    width: 23Px;
+    height: 17Px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 5px;
+  }
+}
+
+.langs__item-link[data-lang="En"]::before {
+	background-repeat: no-repeat;
+	background-size: contain;
+  background-image: url("/assets/img/icons/flag-en.svg");
+}
+.langs__item-link[data-lang="It"]::before {
+	background-repeat: no-repeat;
+	background-size: contain;
+  background-image: url("/assets/img/icons/flag-it.svg");
+}
+.langs__item-link[data-lang="Es"]::before {
+	background-repeat: no-repeat;
+	background-size: contain;
+  background-image: url("/assets/img/icons/flag-es.svg");
+}
+.langs__item-link[data-lang="Pt"]::before {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url("/assets/img/icons/flag-pt.svg");
+}
+.langs__item-link[data-lang="Ru"]::before {
+	background-repeat: no-repeat;
+	background-size: contain;
+  background-image: url("/assets/img/icons/flag-ru.svg");
+}
+
+.langs__btn {
+  background-color: $w;
+  padding: 10px 20px;
+  position: relative;
+  border: 1px solid transparent;
+  z-index: 12;
+
+  @include tablets-hor {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.langs__btn-wrap {
+  z-index: 12;
+  // background-color: $w;
+  // padding: 10px 20px;
+  position: relative;
+  border: 1px solid transparent;
+  display: flex;
+  pointer-events: none;
+}
+// конец подменю
+
 .header__main-menu-item {
-  margin-right: 45px;
+  position: relative;
 
   &:last-child {
     margin-right: 0;
   }
+  &.active {
+    @include tablets-hor {
+      padding-bottom: 30px;
+    }
+    .header__main-menu-item-link {
+      position: relative;
+      border-radius: 6px 6px 0 0;
+      border: 1px solid #ededed;
+      transition: border-color $norm;
+      border-bottom: none;
+      @include tablets-hor {
+        border: none;
+      }
+    }
+
+    .submenu {
+      opacity: 1;
+      border: 1px solid #ededed;
+      transition: max-height $norm;
+      max-height: 300px;
+      padding: 20px;
+      @include tablets-hor {
+        border: none;
+        margin-bottom: 15px;
+      }
+    }
+    .header__main-menu-item-link--submenu::after {
+      transition: $norm;
+      transform: rotate(180deg);
+    }
+  }
+
+  @include tablets-hor {
+    padding: 20px 0;
+    margin: 0 20px;
+    border-top: 1px solid #dedede;
+    width: 95%;
+  }
 }
 
 .header__main-menu-item-link {
+  background-color: $w;
+  padding: 10px 5px;
+  border: 1px solid transparent;
   font-family: $roboto;
   font-weight: $medium;
   font-size: 16px;
+  // transition: $norm;
+  z-index: 12;
   color: $text-menu;
+  white-space: nowrap;
+
+  @include tablets-hor {
+    padding: 0;
+  }
 }
 
 .header__main-menu-item-link--submenu {
   display: flex;
   align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
 
   &::after {
     content: "";
@@ -54,11 +346,33 @@
     background-size: contain;
     width: 8px;
     height: 4px;
+    // transition: $norm;
+    @include tablets-hor {
+      // transform: rotate(-90deg);
+      width: 11px;
+      height: 5px;
+      margin: 0;
+      margin-right: 25px;
+    }
+  }
+  @include tablets-hor {
+    justify-content: space-between;
+		width: 100%;
+		padding: 0;
   }
 }
 
 .header__user-menu {
-  margin-left: 55px;
+  margin-left: 3%;
+
+  @include tablets-hor {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $bg-grey;
+    width: 100%;
+  }
 }
 
 .langs__btn {
@@ -68,16 +382,42 @@
   font-weight: $medium;
   display: flex;
   align-items: center;
+  transition: color $norm;
+
   &::after {
     content: "";
-    margin-left: 8px;
+    margin-left: 30px;
     display: flex;
     background-image: url("/assets/img/icons/arrow-menu.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 8px;
     height: 4px;
+
+    @include tablets-hor {
+      transform: rotate(180deg);
+      width: 11px;
+      height: 5px;
+      margin: 0;
+      margin-right: 25px;
+    }
   }
+
+  &:hover {
+    color: $violet-hover;
+  }
+
+  @include tablets-hor {
+    width: 95%;
+    padding: 20px 0;
+    margin: 0 20px;
+    background-color: initial;
+    border-bottom: 1px solid #dedede;
+  }
+}
+
+.langs__btn-icon {
+  margin-right: 5px;
 }
 
 .header__user-menu-login {
@@ -89,10 +429,16 @@
     .header__user-menu-login-icon {
       fill: $violet-hover;
       stroke: $violet-hover;
-		}
-		.header__user-menu-login-text {
-			color: $violet-hover;
-		}
+    }
+    .header__user-menu-login-text {
+      color: $violet-hover;
+    }
+  }
+
+  @include tablets-hor {
+    margin-left: 0;
+    padding: 20px 0;
+    margin: 0 20px;
   }
 }
 
@@ -100,15 +446,17 @@
   width: 20px;
   height: 20px;
   fill: $violet;
-	stroke: $violet;
-	transition: $norm;
+  stroke: $violet;
+  transition: $norm;
 }
 
 .header__user-menu-login-text {
-	font-size: 16px;
+  font-size: 16px;
   color: $violet;
   font-family: $roboto;
   margin-left: 5px;
   font-weight: $medium;
 	transition: $norm;
+	white-space: nowrap;
+	padding-right: 10px;
 }

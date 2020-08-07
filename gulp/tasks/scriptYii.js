@@ -20,6 +20,6 @@ module.exports = function scriptYii() {
       .pipe(terser())
       .pipe(sourcemaps.write())
       .pipe(rename({ suffix: ".min" }))
-      .pipe(gulp.dest("../yii-eva-dev/web/assets/js"))
+      .pipe(gulp.dest("../yii/web/assets/js"))
   );
 };

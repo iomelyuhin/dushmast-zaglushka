@@ -1,0 +1,133 @@
+.cloudhero {
+	height: 70vh;
+	background-color: $bg-grey;
+	margin-top: 80px;
+
+	@include phones {
+		height: initial;
+		background-color: $w;
+	}
+}
+.cloudhero__container {
+  display: flex;
+  align-items: center;
+	height: 100%;
+	
+	@include tablets {
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+	}
+}
+
+.cloudhero__text,
+.cloudhero__image {
+	width: 50%;
+	
+	@include tablets {
+		width: 80%;
+		text-align: center;
+	}
+}
+
+.cloudhero__desc {
+	margin-top: 20px;
+}
+
+.cloudhero__image-phones {
+	display: none;
+	@include phones {
+		display: block;
+		width: 100%;
+	}
+}
+
+.cloudhero__title {
+	@include phones {
+		font-size: 40Px;
+		line-height: 45Px;
+	}
+}
+
+.cloudhero__title span {
+  font-size: 16px;
+}
+
+.cloudhero__buttons {
+  display: flex;
+	margin-top: 60px;
+	position: relative;
+	z-index: 10;
+	@include tablets {
+		justify-content: center;
+	}
+
+	@include phones {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.cloudhero__image {
+  position: relative;
+	height: 100%;
+	@include tablets {
+		height: initial;
+	}
+	@include phones {
+		display: none;
+	}
+}
+
+.cloudhero__image-wrap {
+  position: absolute;
+  width: 120%;
+  // left: -20%;	
+	bottom: 0;
+	
+	@include tablets {
+		position: relative;
+		width: 100%;
+		left: initial;
+	}
+}
+
+.cloudhero__image-main {
+  // width: 100%;
+  // height: 100%;
+  // background-image: url('/assets/img/content/desktop-hero.png');
+  // background-repeat: no-repeat;
+  // background-size: 150%;
+  // background-position-x: 60%;
+  z-index: 10;
+  position: relative;
+}
+
+.cloudhero__image-circle {
+  position: absolute;
+  z-index: 1;
+  border-radius: 100%;
+}
+
+.cloudhero__image-circle--violet {
+  width: 13.17%;
+	height: 16.7%;
+	top: 15%;
+	left: 23%;
+  background: $violet-gr;
+}
+.cloudhero__image-circle--yellow {
+	width: 20%;
+	height: 28%;
+	top: -9%;
+	right: 8%;
+  background: $yellow-gr;
+}
+
+.cloudhero__image-circle--green {
+  width: 12%;
+	height: 17%;
+	top: 75%;
+	right: 22%;
+  background: $green-gr;
+}

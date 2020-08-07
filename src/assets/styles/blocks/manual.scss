@@ -1,0 +1,118 @@
+.manual {
+	margin-top: 180px;
+	margin-bottom: 100px;
+
+	h1 {
+		text-align: center;
+	}
+
+	h2 {
+		margin-top: 60px;
+	}
+	h3 {
+		margin-top: 40px;
+	}
+
+	p, li {
+		font-family: $proxima;
+		font-weight: normal;
+	}
+
+	p {
+		display: flex;
+		align-items: center;
+	}
+
+	img {
+		display: flex;
+		margin: 0 auto;
+	}
+	a {
+		font-family: $proxima;
+		font-weight: normal;
+	}
+
+	a.manual__item-link {
+		margin-top: 10px;
+		font-size: 28px;
+		text-align: center;
+		padding: 0 10px;
+		color: $b;
+		font-weight: 800;
+	}
+
+	.link {
+		margin: 20px;
+		
+	}
+
+	.apple-btn {
+		max-width: 200px;
+	}
+}
+
+.manual__title {
+	margin-bottom: 30px;
+}
+.manual__container {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.manual__list.manual__list--mac {
+	margin-top: 20px;
+}
+
+.manual__item-link.manual__item-link--main {
+	text-decoration: underline;
+}
+
+.manual-image {
+	max-height: 460px;
+}
+
+.manual__list {
+	margin-top: 50px;
+	// display: flex;
+	// flex-wrap: wrap;
+	// justify-content: space-between;
+}
+
+.manual__item {
+	list-style: disc;
+	// width: 45%;
+	// display: flex;
+	// flex-direction: column;
+	// align-items: center;
+	// margin: 30px 0;
+	// justify-content: space-between;
+
+	@include tablets {
+		width: 100%;
+	}
+}
+
+
+
+.manual__image, .manual__desc {
+	margin-top: 10px;
+}
+
+.manual__item-link--rusManual {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.manual__text {
+	max-width: 900px;
+}
+
+.manual-cta {
+	.rec-btn__text {
+		margin: 0;
+	}
+}

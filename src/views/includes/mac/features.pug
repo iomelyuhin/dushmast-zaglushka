@@ -1,0 +1,41 @@
+include ../../common/mixins.pug
+-
+	var deskFeatList = [
+		{
+			icon: "share",
+			title: "<?=Yii::t('app', 'Sharing')?>",
+			desc: "<?=Yii::t('app', 'Share your records with colleagues and friends via social apps and messengers.')?>"
+		},
+		{
+			icon: "rocket-up",
+			title: "<?=Yii::t('app', 'Quick search')?>",
+			desc: "<?=Yii::t('app', 'Use a smart search feature to find the necessary info quickly.')?>"
+		},
+		{
+			icon: "micro",
+			title: "<?=Yii::t('app', 'Convenient player')?>",
+			desc: "<?=Yii::t('app', 'Playback your calls with one click.')?>"
+		}
+	]
+
+section.features
+	.features__container.container
+		h2.features__title <?=Yii::t('app', 'Advantages-mac')?>
+		ul.features__list
+			each item in deskFeatList
+				li.features__item
+					.features__item-img
+						+icon(item.icon, `features__item-icon features__item-icon--${item.icon}`)
+					h3.features__item-title!=item.title
+					.features__item-desc.desc!=item.desc
+		.features__buttons
+			.features__btn
+				a.apple-btn(class="apple-btn--features" type="button" href="https://rekk.io/download/REKK%20-%20Call%20Recorder%20for%20Mac.mpkg.zip")
+					+icon("apple", "apple-btn__icon")
+					.apple-btn__text <?=Yii::t('app', 'Download for MacOS')?>
+			.features__btn
+				a(class=`rec-btn__btn pc-btn--deskhero` href="https://store.payproglobal.com/checkout?products[1][id]=59817" target="_blank")
+					+icon("cart", "pc-btn__icon")
+					.apple-btn__text <?=Yii::t('app', 'Buy now')?>
+				//- +appleBtn(features, "Скачать REKK для MacOS")
+			//- 	+recBtn(features, "Скачать REKK для ПК", "", "/", "win")

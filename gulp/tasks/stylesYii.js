@@ -59,5 +59,5 @@ module.exports = function styles() {
         extname: ".min.css",
       })
     )
-    .pipe(gulp.dest("../yii-eva-dev/web/assets/css"));
+    .pipe(gulp.dest("../yii/web/assets/css"));
 };

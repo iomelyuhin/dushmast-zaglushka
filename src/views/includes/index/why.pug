@@ -1,44 +1,45 @@
+include ../../common/mixins.pug
 -
 	var whyList = [
 		{
-			icon: "wallet",
-			title: "Simple, Upfront Pricing",
-			desc: "Transparent pricing so you know the cost before purchasing."
+			icon: "micro",
+			title: "<?=Yii::t('app', 'High-quality recording')?>",
+			desc: "<?=Yii::t('app', 'REKK records all inbound and outbound calls and saves them as high-quality audio files.')?>"
 		},
 		{
 			icon: "secure",
-			title: "Secure Online Ordering",
-			desc: "Your content is protected. Our vetted workforce only uses secure tools."
+			title: "<?=Yii::t('app', 'Secure payments')?>",
+			desc: "<?=Yii::t('app', 'It\’s safe and convenient to purchase products on our website because we use the services of the most reliable e-commerce platforms.')?>"
 		},
 		{
 			icon: "speed",
-			title: "Speedy Delivery",
-			desc: "Round-the-clock service to serve you best."
+			title: "<?=Yii::t('app', 'Fast delivery')?>",
+			desc: "<?=Yii::t('app', 'License data is sent to you once your payment has been successfully completed and confirmed.')?>"
 		},
 		{
 			icon: "cloud",
-			title: "Cloud solution",
-			desc: "Professional freelance transcriptionists, captioners, and translators who are vetted for quality."
+			title: "<?=Yii::t('app', 'A cloud-based solution')?>",
+			desc: "<?=Yii::t('app', 'In addition to applications for Android, iOS, MacOS & PC, we offer a cloud-based solution for call recording on any device.')?>"
 		},
 		{
 			icon: "rocket-up",
-			title: "Powerful Technology",
-			desc: "Our powerful software platform makes it easy to deliver high-quality results quickly."
+			title: "<?=Yii::t('app', 'Extra features')?>",
+			desc: "<?=Yii::t('app', 'REKK not only records your calls, but also lets you convert them to text, share the recorded calls with friends, make notes near your records, and create backup copies of your files.')?>"
 		},
 		{
 			icon: "support",
-			title: "Support and Customer Service",
-			desc: "U.S.-based team available 24/7. Reach out to us at any time."
+			title: "<?=Yii::t('app', 'Technical support')?>",
+			desc: "<?=Yii::t('app', 'If you happen to need any assistance, our technical support team will answer all your questions.')?>"
 		}
 	]
 
 section.why
 	.why__container.container
-		h2.why__title Почему REKK?
+		h2.why__title <?=Yii::t('app', 'Why Choose REKK?')?>
 		ul.why__list
 			each item in whyList
 				li.why__item
 					.why__item-icon
 						+icon(item.icon, `why__item-icon-pic why__item-icon-pic--${item.icon}`)
 					h3.why__item-title=item.title
-					.why__item-desc.desc=item.desc
+					.why__item-desc.desc!=item.desc

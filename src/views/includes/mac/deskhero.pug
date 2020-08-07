@@ -1,0 +1,24 @@
+include ../../common/mixins.pug
+section.deskhero
+	.deskhero__container.container
+		.deskhero__text
+			h1.deskhero__title <?=Yii::t('app', 'REKK Call Recorder for MacOS')?>
+			.deskhero__desc.desc <?=Yii::t('app', 'A powerful solution for voice & video call recording from the most popular instant messengers on MacOS devices. Be it a Skype group conversation, a FaceTime call from your friend, a Zoom business meeting, or a Viber interview, REKK will record your call and save it to your Mac.')?>
+			.deskhero__image-phones
+				+image("content/desktop-hero-phones", "png", "deskhero__image-phones-img animate__animated animate__headShake")
+			.deskhero__buttons
+				a.apple-btn(class="apple-btn--features" type="button" href="https://rekk.io/download/REKK%20-%20Call%20Recorder%20for%20Mac.mpkg.zip" target="_blank")
+					+icon("apple", "apple-btn__icon")
+					.apple-btn__text <?=Yii::t('app', 'Download for MacOS')?>
+				a(class=`rec-btn__btn pc-btn--deskhero` href="https://store.payproglobal.com/checkout?products[1][id]=59817" target="_blank")
+					+icon("cart", "pc-btn__icon")
+					.apple-btn__text <?=Yii::t('app', 'Buy now')?>
+				//- +appleBtn("deskhero", "Скачать REKK для MacOS")
+				//- +recBtn("deskhero", "<?=Yii::t('app', 'Download for MacOS')?>", "", "/cloud", "apple")
+		.deskhero__image
+			.deskhero__image-wrap
+				+image("content/desktop-hero-mac", "png", "deskhero__image-main animate__animated animate__flipInY")
+				//- .deskhero__image-main.animate__animated.animate__flipInY
+				.deskhero__image-circle.deskhero__image-circle--violet.animate__animated.animate__zoomIn
+				.deskhero__image-circle.deskhero__image-circle--yellow.animate__animated.animate__zoomIn
+				.deskhero__image-circle.deskhero__image-circle--green.animate__animated.animate__zoomIn

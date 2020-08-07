@@ -1,0 +1,17 @@
+include ../../common/mixins.pug
+section.cloudhero
+	.cloudhero__container.container
+		.cloudhero__text
+			h1.cloudhero__title <?=Yii::t('app', 'Сall recording on iPhone and Android Phones without an app')?>
+			.cloudhero__desc.desc <?=Yii::t('app', 'Record phone calls without a special application on any device')?>
+			.cloudhero__image-phones
+				+image("content/cloud-hero-phones", "png", "cloudhero__image-phones-img animate__animated animate__headShake", "")
+			.cloudhero__buttons
+				+recBtn("cloudhero", "<?=Yii::t('app', 'Sign up for FREE')?>", "", "https://dashboard.rekk.io/reg", "user")
+		.cloudhero__image
+			.cloudhero__image-wrap
+				+image("content/cloud-hero-phones", "png", "cloudhero__image-main animate__animated animate__flipInY")
+				//- .cloudhero__image-main.animate__animated.animate__flipInY
+				.cloudhero__image-circle.cloudhero__image-circle--violet.animate__animated.animate__zoomIn
+				.cloudhero__image-circle.cloudhero__image-circle--yellow.animate__animated.animate__zoomIn
+				.cloudhero__image-circle.cloudhero__image-circle--green.animate__animated.animate__zoomIn

@@ -1,0 +1,31 @@
+.terms {
+	margin-top: 180px;
+	margin-bottom: 100px;
+
+	h1 {
+		text-align: center;
+		@include phones {
+			font-size: 30px;
+		}
+	}
+
+	.terms__date {
+		font-family: $proxima;
+		font-weight: normal;
+		text-align: right;
+	}
+	h2 {
+		margin-top: 60px;
+		@include phones {
+			font-size: 25px;
+		}
+	}
+	h3 {
+		margin-top: 40px;
+	}
+
+	p {
+		font-family: $proxima;
+		font-weight: normal;
+	}
+}

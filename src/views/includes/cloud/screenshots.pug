@@ -1,0 +1,35 @@
+include ../../common/mixins.pug
+-
+	var screenshotsCloudList = [
+		{
+			image: "feat-01",
+			title: "<?=Yii::t('app', 'Call recording without an app')?>",
+			desc: "<?=Yii::t('app', 'Recording of all incoming and outgoing phone calls without any special application.')?>"
+		},
+		{
+			image: "feat-02",
+			title: "<?=Yii::t('app', 'Access to your records from any device')?>",
+			desc: "<?=Yii::t('app', 'The cloud-based call recording solution lets you listen to the recorded calls from any device via your online account.')?>"
+		},
+		{
+			image: "feat-03",
+			title: "<?=Yii::t('app', 'Convenient navigation')?>",
+			desc: "<?=Yii::t('app', 'REKK offers a smart player and lets you save recorded calls to any device.')?>"
+		},
+		{
+			image: "feat-04",
+			title: "<?=Yii::t('app', 'User-friendly interface')?>",
+			desc: "<?=Yii::t('app', 'It’s very easy to start recording phone calls with REKK and to share the recorded calls on social networks.')?>"
+		}
+	]
+section.screenshots
+	.screenshots__container.container
+		h2.screenshots__title <?=Yii::t('app', 'Features cloud')?>
+		ul.screenshots__list
+			each item in screenshotsCloudList
+				li.screenshots__item
+					button.screenshots__item-img-btn(type="button")
+						+image(`content/${item.image}`, "png", "screenshots__item-image")
+						+image(`content/${item.image}`, "png", "screenshots__item-fake")
+					h3.screenshots__item-title=item.title
+					.screenshots__item-desc.desc=item.desc

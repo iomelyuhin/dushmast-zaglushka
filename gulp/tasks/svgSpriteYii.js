@@ -7,6 +7,7 @@ const replace = require("gulp-replace");
 module.exports = function svgSprite() {
   return gulp
     .src("src/assets/img/icons/*.svg")
+		.pipe(gulp.dest("../yii/web/assets/img/icons"))
     .pipe(
       cheerio({
         run: function ($) {
@@ -26,5 +27,5 @@ module.exports = function svgSprite() {
       })
     )
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("../yii-eva-dev/web/assets/img"));
+    .pipe(gulp.dest("../yii/web/assets/img"));
 };

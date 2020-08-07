@@ -1,0 +1,20 @@
+.faq {
+	margin-bottom: 100px;
+	margin-top: 180px;
+
+	h1 {
+		text-align: center;
+		@include phones {
+			font-size: 40px;
+		}
+	}
+
+		h3 {
+		margin-top: 40px;
+	}
+
+	p {
+		font-family: $proxima;
+		font-weight: normal;
+	}
+}

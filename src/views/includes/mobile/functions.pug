@@ -1,40 +1,41 @@
+include ../../common/mixins.pug
 -
 	var funcList = [
 		{
 			img: "func-01",
-			title: "Call recording",
-			desc: "Recording of incoming and outgoing call."
+			title: "<?=Yii::t('app', 'Call recording')?>",
+			desc: "<?=Yii::t('app', 'Recording of all incoming and outgoing phone calls')?>"
 		},
 		{
 			img: "func-02",
-			title: "Hear tracks",
-			desc: "Recording of incoming and outgoing call."
+			title: "<?=Yii::t('app', 'Smart player')?>",
+			desc: "<?=Yii::t('app', 'Convenient navigation and playback of recordings')?>"
 		},
 		{
 			img: "func-03",
-			title: "Edit tracks",
-			desc: "Recording of incoming and outgoing call."
+			title: "<?=Yii::t('app', 'Notes')?>",
+			desc: "<?=Yii::t('app', 'An ability to make notes near the recorded calls')?>"
 		},
 		{
 			img: "func-04",
-			title: "Transition recirding into text",
-			desc: "Recording of incoming and outgoing call."
+			title: "<?=Yii::t('app', 'Transcription')?>",
+			desc: "<?=Yii::t('app', 'Automatical conversion of every phone call to text')?>"
 		},
 		{
 			img: "func-05",
-			title: "Contact managment",
-			desc: "Recording of incoming and outgoing call."
+			title: "<?=Yii::t('app', 'User-friendly interface')?>",
+			desc: "<?=Yii::t('app', 'Quick and simple start of recording')?>"
 		},
 		{
 			img: "func-06",
-			title: "Easy settings",
-			desc: "Recording of incoming and outgoing call."
+			title: "<?=Yii::t('app', 'Easy settings')?>",
+			desc: "<?=Yii::t('app', 'Convenient access to all settings in one menu')?>"
 		}
 	]
 
 section.functions
 	.functions__container.container
-		h2.functions__title Functions
+		h2.functions__title <?=Yii::t('app', 'Features')?>
 		ul.functions__list
 			each item in funcList
 				li.functions__item

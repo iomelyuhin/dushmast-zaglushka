@@ -22,6 +22,6 @@ module.exports = function pug2htmlYii() {
       //   // Updates the object in-place
       //   path.extname = ".php";
       // }))
-      .pipe(gulp.dest("../yii-eva-dev/views/build/common"))
+      .pipe(gulp.dest("../yii/views/build/common"))
   );
 };

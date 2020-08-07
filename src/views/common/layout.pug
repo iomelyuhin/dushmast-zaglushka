@@ -18,12 +18,14 @@ html(lang="ru")
 			//- 	function gtag(){dataLayer.push(arguments);}
 			//- 	gtag('js', new Date());
 			//- 	gtag('config', 'UA-145151725-3');
-	body
+	body.animate__animated.animate__fadeIn
 		.wrapper
 			.maincontent
 				include ./header.pug
 				block content
+				include ./form.pug
 				include ./footer.pug
 
 		script(src="/assets/js/main.min.js")
+		script(src="/assets/js/langs.min.js")
 		block scripts

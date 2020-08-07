@@ -1,0 +1,5 @@
+.support {
+	@include tablets {
+		margin-top: 70px;
+	}
+}

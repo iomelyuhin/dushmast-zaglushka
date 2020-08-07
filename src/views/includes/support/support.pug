@@ -1,0 +1,25 @@
+include ../../common/mixins.pug
+
+
+section.support
+	aside.support-form__wrap
+		form.support-form(action="")
+			.form__content
+				h3.form__title <?=Yii::t('app', 'If you have any questions about REKK products, we’ll gladly answer them.')?>
+				.form__inputs
+					label.form__label.support-form__label--name
+						input#formName.form__inputs-input(type="text" name="name" placeholder="<?=Yii::t('app', 'Your name')?>")
+						.form__input-error.form__input-error--name <?=Yii::t('app', 'Enter your name')?>
+					label.form__label.support-form__label--email
+						input#formEmail.form__inputs-input(type="text" name="email" placeholder="<?=Yii::t('app', 'Email')?>")
+						.form__input-error.form__input-error--email <?=Yii::t('app', 'Enter a valid email address')?>
+				label.form__label.support-form__label--message
+					textarea#formMessage.form__textarea-input(name="message", cols="30", rows="10" placeholder="<?=Yii::t('app', 'Message')?>")
+					.form__input-error.form__input-error--message <?=Yii::t('app', 'Type something')?>
+				.support-form__send-button
+					button.support-form__send-button-btn(type="submit")
+						.form__send-button-btn-text <?=Yii::t('app', 'Send')?>
+						.form__send-button-btn-icon
+							+icon("arrow-right", "form__send-button-btn-icon-pic")
+					.form__input-error.form__input-error--server <?=Yii::t('app', 'Something went wrong. Refresh the page and try again.')?>
+					.form__input-success <?=Yii::t('app', 'Thank you for your message! We\'ll get back to you as soon as possible.')?>

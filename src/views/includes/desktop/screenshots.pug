@@ -1,0 +1,35 @@
+include ../../common/mixins.pug
+-
+	var screenshotsList = [
+		{
+			image: "desktop-screen-01",
+			title: "Запись разговоров",
+			desc: "Запись исходящих и входящих голосовых звонков в популярных мессенджерах и приложениях"
+		},
+		{
+			image: "desktop-screen-01",
+			title: "Удобный плеер",
+			desc: "Воспроизведение записи сразу после разговора"
+		},
+		{
+			image: "desktop-screen-01",
+			title: "Удобный поиск",
+			desc: "Быстрый поиск записи по тексту, номеру и имени собеседника"
+		},
+		{
+			image: "desktop-screen-01",
+			title: "Заметки",
+			desc: "Возможность оставлять заметки к записанным разговорам"
+		}
+	]
+section.screenshots
+	.screenshots__container.container
+		h2.screenshots__title Возможности REKK для MacOS и ПК
+		ul.screenshots__list
+			each item in screenshotsList
+				li.screenshots__item
+					button.screenshots__item-img-btn(type="button")
+						+image(`content/${item.image}`, "png", "screenshots__item-image")
+						+image(`content/${item.image}`, "png", "screenshots__item-fake")
+					h3.screenshots__item-title=item.title
+					.screenshots__item-desc.desc=item.desc

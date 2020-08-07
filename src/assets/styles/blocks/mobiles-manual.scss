@@ -1,0 +1,26 @@
+.mobiles-manual__container {
+	justify-content: center;
+	padding: 50px 0;
+	display: none;
+
+	&.active {
+		display: flex;
+	}
+}
+
+.mobiles-manual__frame {
+	width: 54%;
+	height: 450px;
+
+	@include tablets-hor {
+		width: 82%;
+	}
+
+	@include tablets {
+		width: 100%;
+	}
+
+	@include phones {
+		height: 315px;
+	}
+}

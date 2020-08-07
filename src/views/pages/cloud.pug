@@ -1,0 +1,14 @@
+extends ../common/layout
+
+block variables
+	-var title = "Smart Call Recording"
+
+block content
+	include ../includes/cloud/cloudhero.pug
+	include ../includes/cloud/how.pug
+	include ../includes/cloud/screenshots.pug
+	include ../includes/cloud/features.pug
+	//- include ../includes/desktop/why.pug
+
+block scripts
+	script(src="/assets/js/cloud.min.js")

@@ -1,7 +1,7 @@
 document.addEventListener(`DOMContentLoaded`, function () {
 
 	//! Анимация
-  const functions = document.querySelector(".functions");
+  const functions = document.querySelector(".functions__list");
   const features = document.querySelectorAll(".features__item-img");
 
   // Аналог $(document).ready(function(){
@@ -31,4 +31,11 @@ document.addEventListener(`DOMContentLoaded`, function () {
     return top + height >= 0 && height + window.innerHeight >= bottom+50;
 	}
 	//! Конец анимации
+
+	//!Показываем видео только для русских
+	const videoContainer = document.querySelector(".mobiles-manual__container");
+	const currentPathArr = location.pathname.split("/");
+	if (currentPathArr[1] == "ru") {
+		videoContainer.classList.add("active")
+	}
 });

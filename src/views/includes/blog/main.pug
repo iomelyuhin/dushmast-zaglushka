@@ -1,0 +1,128 @@
+include ../../common/mixins.pug
+-
+	var blogsList = [
+		{
+			date: "Nov 18, 2019",
+			link: "<?=yii\\helpers\\Html::a(Yii::t('app', 'How Do You Transcribe a Recording?'), ['/how-do-you-transcribe-a-recording'], ['class'=>'blog__item-link'])?>",
+			href: "/how-do-you-transcribe-a-recording",
+			img: "content/blog/18-11-19-rekk",
+			alt: "How Do You Transcribe a Recording?",
+			desc: "There are many reasons why some people need to transcribe a recording. Perhaps, they need to convert the lyrics of a song, the soundtrack of a movie or an essential phone call.",
+			ext: "png"
+		},
+		{
+			date: "Nov 14, 2019",
+			link: "<?=yii\\helpers\\Html::a(Yii::t('app', 'Everything You Need to Know About Three-Way Calling'), ['/Everything-You-Need-to-Know-About-Three-Wat-Conference-Calling'], ['class'=>'blog__item-link'])?>",
+			href: "/Everything-You-Need-to-Know-About-Three-Wat-Conference-Calling",
+			img: "content/blog/14-11-19-add-service-number",
+			alt: "Everything You Need to Know About Three-Way Calling",
+			desc: "The feature that allows REKK to record your inbound and outbound calls is a feature you may have never heard of or used before. It’s usually called 3-way calling. This feature helps you connect calls from 2 lines into one group call. In other words, 3-Way Calling lets you talk to several parties simultaneously using your gadget.",
+			ext: "png"
+		},
+		{
+			date: "Nov 11, 2019",
+			link: "<?=yii\\helpers\\Html::a(Yii::t('app', '8 Phone Conversations You’ll Be Glad You Recorded'), ['/8-phone-conversations'], ['class'=>'blog__item-link'])?>",
+			href: "/8-phone-conversations",
+			img: "content/blog/11-11-2019-customer-service",
+			alt: "8 Phone Conversations You’ll Be Glad You Recorded",
+			desc: "Have you ever regretted that you haven’t got a recording of an important phone call? We are sure, you have. Some phone conversations contain essential information that needs to be saved for a long time. In this article, we’ll take a look at phone calls you should definitely record.",
+			ext: "png"
+		},
+		{
+			date: "Oct 29, 2019",
+			link: "<?=yii\\helpers\\Html::a(Yii::t('app', 'Best Speech to Text Apps for iOS and Android'), ['/best-speech-to-text-apps'], ['class'=>'blog__item-link'])?>",
+			href: "/best-speech-to-text-apps",
+			img: "content/blog/29-10-19-e-dictate",
+			alt: "Best Speech to Text Apps for iOS and Android",
+			desc: "Making voice notes on the go is very convenient as it allows us to take notes when we are working on something and want a quick and easy way to record our thoughts. The problem is that you can't edit or make any changes in these voice notes later. For that, you will have to convert speech notes to text. That’s where speech-to-text apps come into the picture.",
+			ext: "png"
+		},
+		{
+			date: "Oct 25, 2019",
+			link: "<?=yii\\helpers\\Html::a(Yii::t('app', 'CALL RECORDING LAWS: INTERNATIONAL COMPARISON'), ['/call-recording-laws'], ['class'=>'blog__item-link'])?>",
+			href: "/call-recording-laws",
+			img: "content/blog/25-10-2019-main",
+			alt: "CALL RECORDING LAWS: INTERNATIONAL COMPARISON",
+			desc: "It's a right of privacy to suppose that when you&rsquo;re talking on the phone, no one is listening except the person you're talking to. The history of the United States has numerous examples when this right was violated. That's why, laws exist to help understand when and under what circumstances such recording is permitted.",
+			ext: "png"
+		},
+		{
+			date: "Oct 23, 2019",
+			link: "<?=yii\\helpers\\Html::a(Yii::t('app', 'Best Second Phone Number Apps for iPhone'), ['/best-seconds-number-apps'], ['class'=>'blog__item-link'])?>",
+			href: "/best-seconds-number-apps",
+			img: "content/blog/10-18-2019-main",
+			alt: "Best Second Phone Number Apps for iPhone",
+			desc: "Why Do You Need Second Number Phone App? Multiple or second telephone numbers help you control your life. They offer you either a burner or permanent number, which you can use for travel, online ads, business, web signups, and making calls from an anonymous phone number. There is a plenty of utilities that can provide you with the second number, most of them are free, at least for a limited time. Let's take a look at some reliable apps that can help you protect your private cell number.",
+			ext: "png"
+		},
+		{
+			date: "Oct 22, 2019",
+			link: "<?=yii\\helpers\\Html::a(Yii::t('app', 'How to Record a Call on iPhone Without an Extra App?'), ['/how-to-record-a-phone-call-without-an-app'], ['class'=>'blog__item-link'])?>",
+			href: "/how-to-record-a-phone-call-without-an-app",
+			img: "content/blog/22-10-19-homepage",
+			alt: "How to Record a Call on iPhone Without an Extra App?",
+			desc: "Every iPhone user knows that Apple has forbidden 3rd party apps to record incoming and outgoing iPhone calls. For many professionals like lawyers, journalists, businessmen or anyone conducting a phone business call, recording a call is an important feature that can end up saving a lot of note-taking effort during the conversation. But certainly there are some options to record calls for iPhone users. We will take a look at some of them, specifically we'll show how to record phone calls on iPhone without any extra app.",
+			ext: "png"
+		},
+		{
+			date: "Oct 21, 2019",
+			link: "<?=yii\\helpers\\Html::a(Yii::t('app', 'How to Record Viber and WhatsApp Calls?'), ['/how-to-record-whatsapp-calls'], ['class'=>'blog__item-link'])?>",
+			href: "/how-to-record-whatsapp-calls",
+			img: "content/blog/11-11-2019-sales-department",
+			alt: "How to Record Viber and WhatsApp Calls?",
+			desc: "WhatsApp and Viber are the best apps which allow people all around the world to make calls free wherever they are located. You can easily tape your usual phone call but there is no in-set feature provided by WhatsApp and Viber for call recording. So, how can we record Viber and WhatsApp calls?",
+			ext: "png"
+		},
+		{
+			date: "Oct 17, 2019",
+			link: "<?=yii\\helpers\\Html::a(Yii::t('app', '10 Apps Every Journalist Needs'), ['/10-apps-every-journalist-needs'], ['class'=>'blog__item-link'])?>",
+			href: "/10-apps-every-journalist-needs",
+			img: "content/blog/15-10-2019-best-journalist-apps",
+			alt: "10 Apps Every Journalist Needs",
+			desc: "To be a good journalist nowadays means to be able to edit photos and videos, record phone calls, do research and remember everything. Fortunately, today there is a utility for everything, so why not to try one that will make your life easier? In this article, we have rounded up ten applications that every journalist should try out.",
+			ext: "png"
+		},
+		{
+			date: "Oct 17, 2019",
+			link: "<?=yii\\helpers\\Html::a(Yii::t('app', 'How to Record a Skype Call?'), ['/how-to-record-a-skype-call'], ['class'=>'blog__item-link'])?>",
+			href: "/how-to-record-a-skype-call",
+			img: "content/blog/593497-how-to-record-your-skype-calls",
+			alt: "How to Record a Skype Call?",
+			desc: "Recently Skype introduced an in-app call recording feature. This in-set call recorder will help you capture important moments in a Skype call with your beloved ones or tape business meetings with your partners. This feature is available for the users of the latest versions of Skype.",
+			ext: "jpg"
+		},
+		{
+			date: "Oct 1, 2019",
+			link: "<?=yii\\helpers\\Html::a(Yii::t('app', '10 Apps Every Blogger Needs'), ['/10-apps-every-bloger-needs'], ['class'=>'blog__item-link'])?>",
+			href: "/10-apps-every-bloger-needs",
+			img: "content/blog/2019-10-01-blogger",
+			alt: "10 Apps Every Blogger Needs",
+			desc: "Blogging allows us to share our thoughts and emotions, through notes, videos, and photos with the whole world. Any blogger needs utilities to make this process easier and faster when they create the content on the go. Let's take a look at 10 apps every blogger needs.",
+			ext: "png"
+		},
+		{
+			date: "Sept 17, 2019",
+			link: "<?=yii\\helpers\\Html::a(Yii::t('app', '5 Ways to Record a Phone Call On iPhone'), ['/5-ways-to-record'], ['class'=>'blog__item-link'])?>",
+			href: "/5-ways-to-record",
+			img: "content/blog/REKK",
+			alt: "5 Ways to Record a Phone Call On iPhone",
+			desc: "There's no doubt that iPhone has many features that make our lives easier. Yet, it doesn't provide us with all the necessary features. When we want to record a phone call, we face the same problem there isn't a built-in phone call recorder in this device. Luckily, there are a couple of ways to record outgoing and incoming calls on this smartphone. Read on to learn 5 best ways to record a phone call on your iPhone.",
+			ext: "png"
+		}
+	]
+
+section.blog
+	.blog__container.container
+		h1.blog__title Blog
+		ul.blog__list
+			each art in blogsList
+				li.blog__item
+					=art.link
+					//- a.blog__item-link(href="/")=art.alt
+					.blog__date=art.date
+					a.blog__image-link(href=art.href)
+						+image(art.img, art.ext, "blog__image-img", art.alt)
+					.blog__desc=art.desc
+					.rec-btn.rec-btn--blog
+						a.rec-btn__btn.rec-btn__btn--blog(href=art.href)
+							.rec-btn__text Read more

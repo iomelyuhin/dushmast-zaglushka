@@ -4,39 +4,56 @@ header.header
 	.container.container--header
 		.header__content
 			a.header__logo(href="/")
-				img.header__logo-img(src="/assets/img/content/logo.png")
+				img.header__logo-img(src="/assets/img/content/logo.png" alt="REKK logo")
 			nav.header__navigation
+
 				ul.header__main-menu
+					li.header__main-menu-item.header__main-menu-item--title <?=Yii::t('app', 'Menu')?>
 					li.header__main-menu-item
-						a.header__main-menu-item-link(href="/mobile.html") For mobile
+						<?=yii\helpers\Html::a(Yii::t('app', 'For mobiles'), ['/mobile'], ['class'=>'header__main-menu-item-link'])?>
 					li.header__main-menu-item
-						a.header__main-menu-item-link(href="/desktop.html") For desktop
+						<?=yii\helpers\Html::a(Yii::t('app', 'For Mac'), ['/mac'], ['class'=>'header__main-menu-item-link'])?>
+					//- li.header__main-menu-item
+					//- 	<?=yii\helpers\Html::a(Yii::t('app', 'For Windows'), ['/desktop'], ['class'=>'header__main-menu-item-link'])?>
 					li.header__main-menu-item
-						a.header__main-menu-item-link(href="/second") Second number
+						<?=yii\helpers\Html::a(Yii::t('app', 'Without an app'), ['/cloud'], ['class'=>'header__main-menu-item-link'])?>
 					li.header__main-menu-item
-						button.header__main-menu-item-link.header__main-menu-item-link--submenu(type="button") Information
+						button.header__main-menu-item-link.header__main-menu-item-link--submenu(type="button") <?=Yii::t('app', 'Information')?>
 						ul.submenu
 							li.submenu__item
-								a.submenu__item-link(href="/privacy") Privacy Policy
+								<?=yii\helpers\Html::a(Yii::t('app', 'Blog'), ['/blog'], ['class'=>'submenu__item-link'])?>
 							li.submenu__item
-								a.submenu__item-link(href="/faq") FAQ
+								<?=yii\helpers\Html::a(Yii::t('app', 'Privacy policy'), ['/privacy'], ['class'=>'submenu__item-link'])?>
 							li.submenu__item
-								a.submenu__item-link(href="/terms") Terms and Conditions
+								<?=yii\helpers\Html::a(Yii::t('app', 'Return & Refund policy'), ['/refund'], ['class'=>'submenu__item-link'])?>
+							li.submenu__item
+								<?=yii\helpers\Html::a(Yii::t('app', 'FAQ'), ['/faq'], ['class'=>'submenu__item-link'])?>
+							li.submenu__item
+								<?=yii\helpers\Html::a(Yii::t('app', 'Terms & Conditions'), ['/terms'], ['class'=>'submenu__item-link'])?>
+							li.submenu__item
+								<?=yii\helpers\Html::a(Yii::t('app', 'Online manuals'), ['/manual'], ['class'=>'submenu__item-link'])?>
 					li.header__main-menu-item
-						button.header__main-menu-item-link(type="button") Contact
+						button.header__main-menu-item-link.openFormBtn(type="button") <?=Yii::t('app', 'Contact us')?>
 				.header__user-menu
 					.header__user-menu-langs.header__user-menu-langs--langs
-						button.langs__btn(type="button") En
+						button.langs__btn(type="button") 
+							.langs__btn-wrap
+								img.langs__btn-icon(src="" alt="")
+								.langs__btn-text En
 						ul.langs__list
 							li.langs__item
-								a.langs__item-link(href="/en" data-lang="En") En
+								a.langs__item-link(href="/en" data-lang="En") English
 							li.langs__item
-								a.langs__item-link(href="/it" data-lang="It") It
+								a.langs__item-link(href="/it" data-lang="It") Italiano
 							li.langs__item
-								a.langs__item-link(href="/fr" data-lang="Fr") Fr
+								a.langs__item-link(href="/es" data-lang="Es") Español
+							li.langs__item
+								a.langs__item-link(href="/pt" data-lang="Pt") Português
+							li.langs__item
+								a.langs__item-link(href="/ru" data-lang="Ru") Русский
 					a.header__user-menu-login(href="https://dashboard.rekk.io/login")
 						+icon("user", "header__user-menu-login-icon")
-						.header__user-menu-login-text Login
+						.header__user-menu-login-text <?=Yii::t('app', 'Login')?>
 			//- hamburger-menu
 			button.hamburger.hamburger--collapse(type="button" aria-label="navigation-menu")
 				span.hamburger-box

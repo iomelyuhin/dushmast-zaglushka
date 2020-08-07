@@ -1,0 +1,45 @@
+include ../../common/mixins.pug
+-
+	var screenshotsList = [
+		{
+			image: "mac-screen-01",
+			title: "<?=Yii::t('app', 'Voice call recording for Mac')?>",
+			desc: "<?=Yii::t('app', 'Record voice calls on WhatsApp, Viber, FaceTime, Facebook Messenger, Skype, Zoom, Telegram, WeChat and other social messengers. REKK records all your incoming & outgoing voice calls and saves them to your Mac in a high quality.')?>"
+		},
+		{
+			image: "mac-screen-02",
+			title: "<?=Yii::t('app', 'Video call recorder for MacOS')?>",
+			desc: "<?=Yii::t('app', 'Record video calls on the most popular social apps, including WhatsApp, FaceTime, Viber, Skype, Telegram, Facebook Messenger, Zoom, WeChat and other messengers with REKK Call Recorder for MacOS.')?>"
+		},
+		{
+			image: "mac-screen-03",
+			title: "<?=Yii::t('app', 'Easy start')?>",
+			desc: "<?=Yii::t('app', 'Start recording voice and video calls on your Mac with a few clicks. With REKK, call recording on MacOS gets smooth and simple.')?>"
+		},
+		{
+			image: "mac-screen-04",
+			title: "<?=Yii::t('app', 'High-quality records')?>",
+			desc: "<?=Yii::t('app', 'Save audio and video calls in crystal-clear quality.')?>"
+		},
+		{
+			image: "mac-screen-05",
+			title: "<?=Yii::t('app', 'Call recording with headphones')?>",
+			desc: "<?=Yii::t('app', 'Record your voice and video calls even when you’re using the headphones.')?>"
+		},
+		//- {
+		//- 	image: "mac-screen-01",
+		//- 	title: "<?=Yii::t('app', 'Notes')?>",
+		//- 	desc: "<?=Yii::t('app', 'Make notes near the recorded calls to point out the important details of your conversations.')?>"
+		//- }
+	]
+section.screenshots
+	.screenshots__container.container
+		h2.screenshots__title <?=Yii::t('app', 'Features-mac')?>
+		ul.screenshots__list
+			each item in screenshotsList
+				li.screenshots__item
+					button.screenshots__item-img-btn(type="button")
+						+image(`content/${item.image}`, "png", "screenshots__item-image")
+						+image(`content/${item.image}`, "png", "screenshots__item-fake")
+					h3.screenshots__item-title!=item.title
+					.screenshots__item-desc.desc!=item.desc

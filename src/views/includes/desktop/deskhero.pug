@@ -1,13 +1,19 @@
+include ../../common/mixins.pug
 section.deskhero
 	.deskhero__container.container
 		.deskhero__text
-			h1.deskhero__title Запись разговора на MacOS и PC<span>beta</span>
-			.deskhero__desc.desc Record calls and transcription of recordings into the text with a search feature
+			h1.deskhero__title <?=Yii::t('app', 'Call recording on Windows')?> <span><?=Yii::t('app', 'beta')?></span>
+			.deskhero__desc.desc <?=Yii::t('app', 'Currently, we are developing new call recording solutions for Windows. The call recording applications for Windows will be launched on August, 24. Stay tuned for news on the website to become one of the first users of our new products.')?>
+			.deskhero__desc.desc(style="margin-top: 20px") <?=Yii::t('app', 'For now, you can try out our cloud-based solution for call recording without any application.')?>
+			.deskhero__image-phones
+				+image("content/desktop-hero-phones", "png", "deskhero__image-phones-img animate__animated animate__headShake")
 			.deskhero__buttons
-				+appleBtn("deskhero")
-				+pcBtn("deskhero")
+				//- +appleBtn("deskhero", "Скачать REKK для MacOS")
+				+recBtn("deskhero", "<?=Yii::t('app', 'Recording without an app')?>", "", "/cloud", "mic")
 		.deskhero__image
-			.deskhero__image-main.animate__animated.animate__flipInY
-			.deskhero__image-circle.deskhero__image-circle--violet.animate__animated.animate__zoomIn
-			.deskhero__image-circle.deskhero__image-circle--yellow.animate__animated.animate__zoomIn
-			.deskhero__image-circle.deskhero__image-circle--green.animate__animated.animate__zoomIn
+			.deskhero__image-wrap
+				+image("content/desktop-hero", "png", "deskhero__image-main animate__animated animate__flipInY")
+				//- .deskhero__image-main.animate__animated.animate__flipInY
+				.deskhero__image-circle.deskhero__image-circle--violet.animate__animated.animate__zoomIn
+				.deskhero__image-circle.deskhero__image-circle--yellow.animate__animated.animate__zoomIn
+				.deskhero__image-circle.deskhero__image-circle--green.animate__animated.animate__zoomIn

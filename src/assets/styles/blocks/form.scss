@@ -1,0 +1,272 @@
+.form__wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+	height: 100%;
+	background-color: rgba($w, 0.7);
+	z-index: 15;
+	max-height: 0;
+	overflow: hidden;
+	transition: $norm;
+
+
+	&.active {
+		max-height: 200vh;
+
+		.form {
+			max-height: 200vh;
+			padding: 40px 0 40px 20%;
+
+			@include tablets-hor {
+				padding-left: 0;
+				height: 100%;
+				top: 0;
+			}
+		}
+	}
+}
+
+.support-form__wrap {
+  top: 0;
+  left: 0;
+  width: 100%;
+	height: 100%;
+	overflow: hidden;
+	transition: $norm;
+	max-height: 200vh;
+	background-color: transparent;
+	position: relative;
+	z-index: 1;
+
+
+
+		.support-form {
+			max-height: 200vh;
+			min-height: 110vh;
+			padding: 40px 0 40px 20%;
+			position: relative;
+			@include tablets-hor {
+				padding-left: 0;
+				height: 100%;
+				top: 0;
+			}
+		}
+		.support-form__close {
+			display: none;
+		}
+}
+
+.form,
+.support-form {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("/assets/img/icons/form-figure.svg") no-repeat, #f5f5f5;
+  background-size: 50% 100%;
+  background-position: 125% 0;
+  display: flex;
+  width: 100%;
+	max-height: 0;
+	overflow: hidden;
+	transition: $norm;
+	z-index: 15;
+}
+
+.form__content {
+  // width: 40%;
+	max-width: 60%;
+	
+	@include tablets-hor {
+		max-width: 95%;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.form__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.form__close-btn {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: $violet;
+}
+
+.form__title {
+  font-family: $proxima;
+  font-weight: 800;
+	font-size: 50px;
+	
+	@include phones {
+		font-size: 30px;
+	}
+}
+
+.form__inputs {
+	margin-top: 35px;
+	display: flex;
+	margin-bottom: 23px;
+	
+	// justify-content: space-between;
+	
+	@include phones {
+		flex-direction: column;
+	}
+}
+
+.form__label {
+	width: 100%;
+	margin-right: 20px;
+	position: relative;
+	&:last-child {
+		margin-right: 0;
+		@include phones {
+			margin-bottom: 0;
+		}
+	}
+	@include phones {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	&.error {
+		.form__inputs-input, .form__textarea-input {
+			border-color: red;
+		}
+		.form__input-error {
+			opacity: 1;
+		}
+	}
+
+}
+
+.form__input-success {
+	opacity: 0;
+	color: #1bb65d;
+	margin-left: 10px;
+	font-family: $roboto;
+	transition: 0.3s;
+
+	&.active {
+		opacity: 1;
+	}
+}
+
+.form__inputs-input {
+	width: 100%;
+  padding: 20px 25px;
+  border: 1px solid #ededed;
+  border-radius: 12px;
+	background-color: #fff;
+	font-family: $roboto;
+	font-size: 16px;
+	outline: none;
+	transition: $norm;
+}
+
+.form__textarea {
+	width: 100%;
+	position: relative;
+}
+.form__input-error {
+	color: red;
+	font-family: $roboto;
+	padding: 5px 25px;
+	position: absolute;
+	bottom: -25px;
+	left: 0;
+	opacity: 0;
+	transition: $norm;
+}
+
+.form__textarea-input {
+	font-family: $roboto;
+	font-size: 16px;
+  width: 100%;
+  padding: 20px 25px;
+  border: 1px solid #ededed;
+  border-radius: 12px;
+	background-color: #fff;
+	resize: vertical;
+	outline: none;
+}
+
+.form__send-button,
+.support-form__send-button {
+	position: relative;
+	margin-top: 55px;
+	&.error {
+		display: flex;
+		flex-direction: column;
+		.form__input-error {
+			opacity: 1;
+			padding: 10px 0 0 0;
+			position: initial;
+			
+		}
+		
+	}
+}
+
+.support-form__send-button {
+	display: flex;
+	align-items: center;
+}
+
+.form__input-error--message {
+	width: 300px;
+
+}
+
+.form__input-error--server {
+	bottom: 15px;
+	left: 25%;
+}
+
+.form__send-button-btn,
+.support-form__send-button-btn {
+  background-color: $violet;
+	display: flex;
+	width: fit-content;
+  border-radius: 12px;
+  align-items: center;
+	justify-content: center;
+	padding: 17px 50px;
+	transition: $norm;
+
+	&:hover {
+		background-color: $violet-hover;
+	}
+
+	&.blocked {
+		opacity: 0.3;
+	}
+}
+
+.form__send-button-btn-text {
+  color: $w;
+  font-family: $proxima;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form__send-button-btn-icon {
+	margin-left: 10px;
+}
+
+.form__send-button-btn-icon-pic {
+	width: 16Px;
+	height: 12Px;
+	stroke: $w;
+	stroke-width: 2px;
+	fill: none;
+}
+

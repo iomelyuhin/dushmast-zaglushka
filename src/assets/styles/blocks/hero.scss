@@ -1,92 +1,169 @@
 .hero {
-	background-color: $bg-grey;
-	height: 80vh;
+  background-color: $bg-grey;
+  height: 70vh;
+	margin-top: 80px;
+
+	@include phones {
+		height: initial;
+		background-color: $w;
+	}
+	
 }
 
 .hero__container {
-	display: flex;
-	// width: 100%;
-	height: 100%;
+  display: flex;
+  // width: 100%;
+  height: 100%;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include phones {
+    width: 100%;
+  }
 }
 
 .hero__text-content {
-	width: 55%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 	justify-content: center;
+	position: relative;
+	z-index: 11;
+
+  @include tablets {
+    width: 100%;
+    align-items: center;
+  }
 }
 
+.hero__text-content-img {
+  display: none;
+  @include phones {
+		display: block;
+		width: 100%;
+  }
+}
+
+.hero__text-content-image {
+	min-width: 100%;
+}
+
+
 .hero__title {
-	font-size: 66px;
+  font-size: 66px;
+  @include phones {
+		width: 90%;
+		text-align: center;
+  }
 }
 
 .hero__desc {
 	margin-top: 20px;
+  @include phones {
+		width: 90%;
+		text-align: center;
+  }
 }
 
 .hero__buttons {
-	margin-top: 40px;
+  margin-top: 40px;
 	display: flex;
+	position: relative;
+	z-index: 10;
+  @include phones {
+		width: 90%;
+		flex-direction: column;
+  }
 }
+
+.hero__btn {
+	@include phones {
+		width: 100%;
+	}
+}
+
+
 
 //!Картинка на главном экране
 
 .hero__image {
-	width: 45%;
-	position: relative;
-	height: 100%;
+  width: 45%;
+  position: relative;
+  height: 100%;
+	min-height: 40vh;
+	
+	@include phones {
+		display: none;
+	}
 }
 
 .hero__image-wrap {
-	position: absolute;
-	width: 150%;
-	left: -20%;
-	bottom: 10%;
-	// z-index: 10;
+  position: absolute;
+  width: 150%;
+  left: -20%;
+  bottom: 10%;
+
+  @include tablets {
+    width: 200%;
+    left: -55%;
+  }
+  // z-index: 10;
 }
 
 .hero__image-img {
-	position: relative;
+  position: relative;
 	z-index: 10;
+	
+	@include tablets {
+		z-index: 9;
+	}
 }
 
 .hero__image-circle {
-	position: absolute;
-	z-index: 2;
-	border-radius: 100%;
+  position: absolute;
+  z-index: 2;
+  border-radius: 100%;
 }
 
 .hero__image-circle--violet {
-	width: 9%;
-	height: 14%;
-	background: $violet-gr;
-	left: 50%;
-	top: 0;
+  width: 9%;
+  height: 14%;
+  background: $violet-gr;
+  left: 50%;
+  top: 0;
 }
 
 .hero__image-circle--yellow {
-	width: 21%;
-	height: 32%;
-	background: $yellow-gr;
-	left: 30%;
-	top: 10%;
+  width: 21%;
+  height: 32%;
+  background: $yellow-gr;
+  left: 30%;
+  top: 10%;
 }
 
 .hero__image-circle--green {
-	width: 17%;
-	height: 26%;
-	background: $green-gr;
-	bottom: 0;
-	left: 60%;
+  width: 17%;
+  height: 26%;
+  background: $green-gr;
+  bottom: 0;
+  left: 60%;
 }
 
 .hero__image-figure {
-	position: absolute;
-	width: 699px;
-	height: 714px;
-	background-image: url("/assets/img/icons/hero-fig.svg");
-	bottom: -11%;
-	left: 18%;
-	z-index: 1;
+  position: absolute;
+  width: 699px;
+  height: 714px;
+  background-image: url("/assets/img/icons/hero-fig.svg");
+  bottom: -11%;
+  left: 18%;
+  z-index: 1;
+
+  @include tablets {
+		width: 800px;
+		height: 640px;
+  }
 }

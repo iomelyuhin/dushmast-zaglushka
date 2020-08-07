@@ -3,11 +3,16 @@
 	padding: 140px 0;
 }
 
+.features__title {
+	text-align: center;
+}
+
 .features__list {
 	display: flex;
 	width: 100%;
 	justify-content: space-around;
 	margin-top: 80px;
+	flex-wrap: wrap;
 }
 
 .features__item {
@@ -31,6 +36,10 @@
 			background-color: rgba(#37B4FB, 0.1);
 		}
 	}
+
+	@include phones {
+		width: 100%;
+	}
 }
 
 .features__item-img {
@@ -40,6 +49,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@include phones {
+		margin-top: 50px;
+	}
 }
 
 .features__item-icon--rocket {
@@ -64,8 +77,58 @@
 	fill: none;
 }
 
+.features__item-icon--infinity {
+	stroke: none;
+	fill: #8051E5;
+	width: 46px;
+	height: 30px;
+}
+
+.features__item-icon--cloud {
+	width: 40px;
+	height: 36px;
+	stroke: #FD8A3F;
+	fill: none;
+}
+
+.features__item-icon--share {
+	width: 40px;
+	height: 36px;
+	fill: #FD8A3F;
+	stroke: none;
+}
+
+.features__item-icon--rocket-up {
+	width: 40px;
+	height: 36px;
+	stroke: #8051E5;
+	fill: none;
+}
+
+.features__item-icon--micro {
+	width: 40px;
+	height: 36px;
+	fill: #37B4FB	;
+	stroke: none;
+}
+
+.features__item-icon--desktop {
+	width: 40px;
+	height: 36px;
+	fill: none;
+	stroke: #FD8A3F;
+}
+.features__item-icon--feather {
+	width: 40px;
+	height: 36px;
+	fill: none;
+	stroke: #37B4FB;
+	transform: rotate(-90deg);
+}
+
 .features__item-title {
 	margin-top: 40px;
+	text-align: center;
 }
 
 .features__item-desc {
@@ -77,4 +140,15 @@
 	display: flex;
 	justify-content: center;
 	margin-top: 130px;
+
+	@include phones {
+		flex-direction: column;
+	}
+}
+
+.features__item-icon--def-icon {
+	fill: none;
+	stroke: $violet;
+	width: 35px;
+	height: 35px;
 }

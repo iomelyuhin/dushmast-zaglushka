@@ -79,9 +79,6 @@ button {
 	justify-content: space-between;
 }
 
-header {
-	max-height: 80px;
-}
 
 footer {
 	max-height: 390px;
@@ -95,6 +92,14 @@ footer {
   @include phones {
     width: 90%;
   }
+}
+
+.site-error {
+	.rec-btn__btn {
+		color: $w;
+		font-family: $proxima;
+		font-size: 20px;
+	}
 }
 
 

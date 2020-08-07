@@ -1,24 +1,25 @@
+include ../../common/mixins.pug
 -
 	var featList = [
 		{
-			title: "Simple start",
-			desc: "Transparent pricing so you know the cost before purchasing.",
+			title: "<?=Yii::t('app', 'Availability')?>",
+			desc: "<?=Yii::t('app', 'REKK call recording applications are available on the AppStore and Play Market.')?>",
 			icon: "rocket"
 		},
 		{
-			title: "Free demo version",
-			desc: "Your content is protected. Our vetted workforce only uses secure tools.",
-			icon: "free"
+			title: "<?=Yii::t('app', 'No limits')?>",
+			desc: "<?=Yii::t('app', 'With REKK, you can record as many calls as you need.')?>",
+			icon: "infinity"
 		},
 		{
-			title: "For any operation system",
-			desc: "Round-the-clock service to serve you best.",
+			title: "<?=Yii::t('app', 'Backup')?>",
+			desc: "<?=Yii::t('app', 'REKK lets you create backup copies of your recorded calls.')?>",
 			icon: "mobile"
 		}
 	]
 section.features
 	.features__container.container
-		h2.features__title Features
+		h2.features__title <?=Yii::t('app', 'Advantages')?>
 		ul.features__list
 			each item in featList
 				li.features__item
@@ -28,6 +29,6 @@ section.features
 					.features__item-desc.desc=item.desc
 		.features__buttons
 			.features__btn
-				+appleBtn(features)
+				+appleBtn("features", "<?=Yii::t('app', 'Download on AppStore')?>")
 			.features__btn
-				+recBtn(features)
+				+recBtn("features", "<?=Yii::t('app', 'Download on Google Play')?>", "", "https://play.google.com/store/apps/details?id=rekk.call.recorder", "android")

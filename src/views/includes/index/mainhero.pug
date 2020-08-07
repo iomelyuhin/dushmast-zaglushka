@@ -1,30 +1,44 @@
+include ../../common/mixins.pug
 section.mainhero
 	.mainhero__container.container
-		h1.mainhero__title Запись и расшифровка звонков для&nbsp;Android, macOS, iOS
-		.mainhero__desc.desc Запись разговора без установки приложения
+		h1.mainhero__title <?=Yii::t('app', 'Call recording and transcription for iOS, Android, MacOS, PC')?>
+		.mainhero__desc.desc <?=Yii::t('app', 'And a cloud-based solution for call recording on any device')?>
 		ul.mainhero__list.animate__animated.animate__zoomIn
 			li.mainhero__item
-				.mainhero__item-text
-					h3.mainhero__item-title Запись разговора на iOS и Android
-					ul.mainhero__item-list
-						li.mainhero__item-item Расшифровка голоса
-						li.mainhero__item-item Запись разговора в облако
-				.mainhero__item-button
-					a.mainhero__item-link(href="/mobile.html") Подробнее
+				.mainhero__item-wrap-link
+					.mainhero__item-text
+						a(href="/mobile")
+							h3.mainhero__item-title <?=Yii::t('app', 'Call recording apps for iOS & Android')?>
+						ul.mainhero__item-list
+							li.mainhero__item-item <?=Yii::t('app', 'record all incoming and outgoing calls')?>
+							li.mainhero__item-item <?=Yii::t('app', 'convert your calls to text')?>
+							li.mainhero__item-item <?=Yii::t('app', 'create backup copies of your records')?>
+							li.mainhero__item-item <?=Yii::t('app', 'use a smart search feature to find the necessary info with ease')?>
+					.mainhero__item-button
+						a.mainhero__item-link(href="/mobile") <?=Yii::t('app', 'LEARN MORE')?>
 			li.mainhero__item
-				.mainhero__item-text
-					h3.mainhero__item-title Запись разговора на MacOS И PC(beta)
-					ul.mainhero__item-list
-						li.mainhero__item-item Расшифровка голоса
-						li.mainhero__item-item Запись разговора в облако
-				.mainhero__item-button
-					a.mainhero__item-link(href="/desktop.html") Подробнее
+				.mainhero__item-wrap-link
+					.mainhero__item-text
+						a(href="/mac")
+							h3.mainhero__item-title <?=Yii::t('app', 'REKK Call Recorder for MacOS')?>
+						ul.mainhero__item-list
+							li.mainhero__item-item <?=Yii::t('app', 'record voice calls from the most popular social apps and IMs')?>
+							li.mainhero__item-item <?=Yii::t('app', 'download your recorded calls in the highest quality')?>
+							li.mainhero__item-item <?=Yii::t('app', 'make notes near your records')?>
+					.mainhero__item-button
+						a.mainhero__item-link(href="/mac" aria-label="Learn more") <?=Yii::t('app', 'LEARN MORE')?>
 			li.mainhero__item
-				.mainhero__item-text
-					h3.mainhero__item-title Второй номер
-					ul.mainhero__item-list
-						li.mainhero__item-item Расшифровка голоса
-						li.mainhero__item-item Запись разговора в облако
-						li.mainhero__item-item Независимо от операционной системы
-				.mainhero__item-button
-					a.mainhero__item-link(href="/second.html") Подробнее
+				.mainhero__item-wrap-link
+					.mainhero__item-text
+						a(href="/cloud")
+							h3.mainhero__item-title <?=Yii::t('app', 'Call recording without an app for any device')?>
+						ul.mainhero__item-list
+							li.mainhero__item-item <?=Yii::t('app', 'a cloud-based solution for call recording')?>
+							li.mainhero__item-item <?=Yii::t('app', 'compatibility with all operating systems')?>
+							li.mainhero__item-item <?=Yii::t('app', 'access to the recorded calls from any device')?>
+							li.mainhero__item-item <?=Yii::t('app', 'automatical transcription of phone calls')?>
+					.mainhero__item-button-wrap
+						.mainhero__item-button
+							a.mainhero__item-link(href="/cloud" aria-label="Learn more") <?=Yii::t('app', 'LEARN MORE')?>
+						.mainhero__item-button.mainhero__item-button--sign
+							a.mainhero__item-link(href="https://dashboard.rekk.io/reg" aria-label="Sign up") <?=Yii::t('app', 'Sign up for FREE')?>

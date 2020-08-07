@@ -1,67 +1,149 @@
 .deskhero {
-	height: 90vh;
+	height: 70vh;
+	background-color: $bg-grey;
+	margin-top: 80px;
+
+	@include tablets-hor {
+		height: initial;
+		background-color: $w;
+	}
 }
 .deskhero__container {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 	height: 100%;
+	
+	@include tablets {
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+	}
 }
 
 .deskhero__text,
 .deskhero__image {
 	width: 50%;
+	
+	@include tablets {
+		width: 80%;
+		text-align: center;
+	}
 }
 
-.deskhero__title span{
-	font-size: 16px;
+.deskhero__image-phones {
+	display: none;
+	@include phones {
+		display: block;
+		width: 100%;
+	}
+}
+
+.deskhero__title {
+	@include phones {
+		font-size: 40Px;
+		line-height: 45Px;
+	}
+}
+
+.deskhero__title span {
+  font-size: 16px;
 }
 
 .deskhero__buttons {
-	display: flex;
+  display: flex;
 	margin-top: 60px;
+	@include tablets {
+		justify-content: center;
+	}
+
+	@include phones {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 .deskhero__image {
-	position: relative;
+  position: relative;
 	height: 100%;
+	@include tablets {
+		height: initial;
+	}
+	@include phones {
+		display: none;
+	}
+}
+
+.deskhero__image-wrap {
+  position: absolute;
+  width: 150%;
+  left: -20%;
+	bottom: -5%;
+	
+	@include tablets-hor {
+		position: relative;
+		// width: 100%;
+		// left: initial;
+	}
 }
 
 .deskhero__image-main {
-	width: 100%;
-	height: 100%;
-	background-image: url('/assets/img/content/desktop-hero.png');
-	background-repeat: no-repeat;
-	background-size: 150%;
-	background-position-x: 60%;
-	z-index: 10;
-	position: relative;
+  // width: 100%;
+  // height: 100%;
+  // background-image: url('/assets/img/content/desktop-hero.png');
+  // background-repeat: no-repeat;
+  // background-size: 150%;
+  // background-position-x: 60%;
+  z-index: 10;
+  position: relative;
 }
 
 .deskhero__image-circle {
-	position: absolute;
-	z-index: 1;
-	border-radius: 100%;
+  position: absolute;
+  z-index: 1;
+  border-radius: 100%;
 }
 
 .deskhero__image-circle--violet {
-	width: 18%;
-	height: 15%;
-	top: 11%;
-	left: 12%;
-	background: $violet-gr;
+  width: 11.17%;
+  height: 16.7%;
+  top: 11%;
+  left: 28%;
+  background: $violet-gr;
 }
 .deskhero__image-circle--yellow {
-	width: 31%;
-	height: 25%;
-	top: 11%;
-	right: 0;
-	background: $yellow-gr;
+  width: 19%;
+  height: 28.3%;
+  top: 19%;
+  right: 8%;
+  background: $yellow-gr;
 }
 
 .deskhero__image-circle--green {
-	width: 13%;
-	height: 11%;
-	top: 53%;
-	right: 6%;
-	background: $green-gr;
+  width: 8%;
+  height: 12%;
+  top: 67%;
+  right: 19%;
+  background: $green-gr;
+}
+
+
+.pc-btn--deskhero {
+	margin-left: 20px;
+	min-width: 200px;
+
+	.apple-btn__text {
+		margin-left: 0;
+	}
+
+	@include phones {
+		margin-left: 0;
+		margin-top: 20px;
+	}
+}
+
+.pc-btn__icon.icon-cart {
+	fill: #fff;
+	height: 25px;
+	width: 25px;
+	margin-right: 15px;
 }

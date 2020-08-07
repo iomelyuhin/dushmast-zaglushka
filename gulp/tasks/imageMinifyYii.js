@@ -4,8 +4,8 @@ const imagemin = require("gulp-imagemin");
 module.exports = function imageMinify() {
   return gulp
     .src([
-      "src/assets/img/content/*.{gif,png,jpg,svg,webp}",
-      "src/assets/img/icons/flags/*.{gif,png,jpg,svg,webp}",
+      "src/assets/img/content/**/*.{gif,png,jpg,svg,webp}",
+      // "src/assets/img/icons/flags/*.{gif,png,jpg,svg,webp}",
     ])
     .pipe(
       imagemin([
@@ -20,5 +20,5 @@ module.exports = function imageMinify() {
         }),
       ])
     )
-    .pipe(gulp.dest("../yii-eva-dev/web/assets/img/content/"));
+    .pipe(gulp.dest("../yii/web/assets/img/content/"));
 };

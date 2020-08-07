@@ -5,28 +5,33 @@ footer.footer
 	.footer__container.container
 		.footer__content
 			.footer__content-wrap
-				.footer__logo
-					+image("content/logo-footer", "png", "footer__logo-pic")
+				a.footer__logo(href="/")
+					+image("content/logo-footer", "png", "footer__logo-pic", "REKK logo")
 				nav.footer__nav
 					.footer__nav-wrap
-						h3.footer__nav-title REKK products
+						h3.footer__nav-title <?=Yii::t('app', 'REKK products')?>
 						ul.footer__nav-list
 							li.footer__nav-item
-								a.footer__nav-item-link(href="/") For mobile
+								<?=yii\helpers\Html::a(Yii::t('app', 'For mobiles'), ['/mobile'], ['class'=>'footer__nav-item-link'])?>
 							li.footer__nav-item
-								a.footer__nav-item-link(href="/") For desktop
+								<?=yii\helpers\Html::a(Yii::t('app', 'For Mac'), ['/mac'], ['class'=>'footer__nav-item-link'])?>
 							li.footer__nav-item
-								a.footer__nav-item-link(href="/") Second number
+								<?=yii\helpers\Html::a(Yii::t('app', 'A cloud-based solution'), ['/cloud'], ['class'=>'footer__nav-item-link'])?>
 					.footer__nav-wrap
-						h3.footer__nav-title Information
+						h3.footer__nav-title <?=Yii::t('app', 'Information')?>
 						ul.footer__nav-list
 							li.footer__nav-item
-								a.footer__nav-item-link(href="/") Privacy Policy
+								<?=yii\helpers\Html::a(Yii::t('app', 'Blog'), ['/blog'], ['class'=>'footer__nav-item-link'])?>
 							li.footer__nav-item
-								a.footer__nav-item-link(href="/") Privacy Policy
+								<?=yii\helpers\Html::a(Yii::t('app', 'Privacy policy'), ['/privacy'], ['class'=>'footer__nav-item-link'])?>
 							li.footer__nav-item
-								a.footer__nav-item-link(href="/") Terms and Conditions
+								<?=yii\helpers\Html::a(Yii::t('app', 'FAQ'), ['/faq'], ['class'=>'footer__nav-item-link'])?>
+							li.footer__nav-item
+								<?=yii\helpers\Html::a(Yii::t('app', 'Terms & Conditions'), ['/terms'], ['class'=>'footer__nav-item-link'])?>
 					.footer__nav-wrap
-						button.footer__nav-title(tupe="button") Contact Us
-			.footer__text SOFTWARE INTENDED FOR LEGAL USE ONLY. It is the violation of the applicable law and your local jurisdiction laws to install the Licensed Software onto a device you do not own.The law generally requires you to notify owners of the devices...
-		.footer__copy Copyright © 2020 REKK
+						h3.footer__nav-title <?=Yii::t('app', 'Contacts')?>
+						ul.footer__nav-list
+							li.footer__nav-item
+								<?=yii\helpers\Html::a(Yii::t('app', 'Contact us'), ['/support'], ['class'=>'footer__nav-item-link'])?>
+			.footer__text 
+		.footer__copy <?=Yii::t('app', 'Copyright © 2020 REKK')?>
