@@ -7,7 +7,7 @@ section.mainhero
 			li.mainhero__item
 				.mainhero__item-wrap-link
 					.mainhero__item-text
-						a(href="/mobile")
+						a(href="/mobile" onclick="gtag('event', 'click', {'event_category': 'main_mobile','event_label': 'learn_more'})")
 							h3.mainhero__item-title <?=Yii::t('app', 'Call recording apps for iOS & Android')?>
 						ul.mainhero__item-list
 							li.mainhero__item-item <?=Yii::t('app', 'record all incoming and outgoing calls')?>
@@ -15,22 +15,22 @@ section.mainhero
 							li.mainhero__item-item <?=Yii::t('app', 'create backup copies of your records')?>
 							li.mainhero__item-item <?=Yii::t('app', 'use a smart search feature to find the necessary info with ease')?>
 					.mainhero__item-button
-						a.mainhero__item-link(href="/mobile") <?=Yii::t('app', 'LEARN MORE')?>
+						a.mainhero__item-link(href="/mobile" onclick="gtag('event', 'click', {'event_category': 'main_mobile','event_label': 'learn_more'})") <?=Yii::t('app', 'LEARN MORE')?>
 			li.mainhero__item
 				.mainhero__item-wrap-link
 					.mainhero__item-text
-						a(href="/mac")
+						a(href="/mac" onclick="gtag('event', 'click', {'event_category': 'main_mac','event_label': 'learn_more'})")
 							h3.mainhero__item-title <?=Yii::t('app', 'REKK Call Recorder for MacOS')?>
 						ul.mainhero__item-list
 							li.mainhero__item-item <?=Yii::t('app', 'record voice calls from the most popular social apps and IMs')?>
 							li.mainhero__item-item <?=Yii::t('app', 'download your recorded calls in the highest quality')?>
 							li.mainhero__item-item <?=Yii::t('app', 'make notes near your records')?>
 					.mainhero__item-button
-						a.mainhero__item-link(href="/mac" aria-label="Learn more") <?=Yii::t('app', 'LEARN MORE')?>
+						a.mainhero__item-link(href="/mac" aria-label="Learn more" onclick="gtag('event', 'click', {'event_category': 'main_mac','event_label': 'learn_more'})") <?=Yii::t('app', 'LEARN MORE')?>
 			li.mainhero__item
 				.mainhero__item-wrap-link
 					.mainhero__item-text
-						a(href="/cloud")
+						a(href="/cloud" onclick="gtag('event', 'click', {'event_category': 'main_mdashboard','event_label': 'learn_more'})")
 							h3.mainhero__item-title <?=Yii::t('app', 'Call recording without an app for any device')?>
 						ul.mainhero__item-list
 							li.mainhero__item-item <?=Yii::t('app', 'a cloud-based solution for call recording')?>
@@ -39,6 +39,6 @@ section.mainhero
 							li.mainhero__item-item <?=Yii::t('app', 'automatical transcription of phone calls')?>
 					.mainhero__item-button-wrap
 						.mainhero__item-button
-							a.mainhero__item-link(href="/cloud" aria-label="Learn more") <?=Yii::t('app', 'LEARN MORE')?>
+							a.mainhero__item-link(href="/cloud" aria-label="Learn more" onclick="gtag('event', 'click', {'event_category': 'main_mdashboard','event_label': 'learn_more'})") <?=Yii::t('app', 'LEARN MORE')?>
 						.mainhero__item-button.mainhero__item-button--sign
-							a.mainhero__item-link(href="https://dashboard.rekk.io/reg" aria-label="Sign up") <?=Yii::t('app', 'Sign up for FREE')?>
+							a.mainhero__item-link(href="https://dashboard.rekk.io/reg" aria-label="Sign up" onclick="gtag('event', 'click', {'event_category': 'main_mdashboard','event_label': 'free_register'})") <?=Yii::t('app', 'Sign up for FREE')?>

@@ -1,0 +1,13 @@
+extends ../common/layout
+
+block variables
+	-var title = "Create Rekk web account"
+
+block content
+	include ../includes/create-web-account/main.pug
+	//- include ../includes/desktop/screenshots.pug
+	//- include ../includes/desktop/features.pug
+	//- include ../includes/desktop/why.pug
+
+block scripts
+	script(src="/assets/js/webAccount.min.js")

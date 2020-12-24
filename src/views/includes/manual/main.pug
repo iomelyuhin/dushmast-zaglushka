@@ -3,9 +3,9 @@ include ../../common/mixins.pug
 section.manual
 	.manual__container.container
 		h1.manual__title <?=Yii::t('app', 'Online manuals')?>
-		a.manual__item-link.manual__item-link--main(href="/manual/manual-for-mac")
-			.manual__item-link-text Online Manual for REKK Call Recorder for Mac
+		<?=yii\helpers\Html::a(Yii::t('app', 'Online Manual for REKK Call Recorder for Mac'), ['/manual/manual-for-mac'], ['class'=>'manual__item-link manual__item-link--main'])?>
+		//- a.manual__item-link.manual__item-link--main(href="/manual/manual-for-mac")
+		//- 	.manual__item-link-text Online Manual for REKK Call Recorder for Mac
 		a.manual__item-link.manual__item-link--rusManual.manual__item-link--main(href="/manual/manual-for-ios")
 			.manual__item-link-text REKK для iPhone. Как пользоваться и как записать разговор.
-		a.manual__item-link.manual__item-link--main(href="/manual/audio-plugin-mac")
-			.manual__item-link-text REEK Audio Device Plug-in for Mac
+		<?=yii\helpers\Html::a(Yii::t('app', 'REКK Audio Device Plug-in for Mac'), ['/manual/audio-plugin-mac'], ['class'=>'manual__item-link manual__item-link--main'])?>

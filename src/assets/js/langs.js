@@ -56,6 +56,14 @@ document.addEventListener(`DOMContentLoaded`, function () {
         currentLangName.innerHTML = "Por";
         switchLinksGlobal("pt");
         break;
+      case "fr":
+        currentLangName.innerHTML = "Fra";
+        switchLinksGlobal("fr");
+        break;
+      case "de":
+        currentLangName.innerHTML = "Deu";
+        switchLinksGlobal("de");
+        break;
 
       default:
         break;

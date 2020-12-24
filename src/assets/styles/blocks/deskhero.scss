@@ -7,6 +7,16 @@
 		height: initial;
 		background-color: $w;
 	}
+
+	.mainhero__desc.desc {
+		font-size: 14px;
+		justify-content: flex-start;
+
+		@include tablets {
+			justify-content: center;
+			text-align: left;
+		}
+	}
 }
 .deskhero__container {
   display: flex;

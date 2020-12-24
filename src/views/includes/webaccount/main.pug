@@ -1,0 +1,19 @@
+section.form-account__wrap.active.form-account__wrap--web-account
+	form.form-account.container(action="#")
+		h1.form-account__title Create Rekk web account
+		.form-account__content
+			label.form-account__label
+				input.form-account__inputs-input(type="text" name="email" placeholder="Email")
+				.form-account__input-error
+			label.form-account__label
+				input.form-account__inputs-input(type="text" placeholder="Create password" name="password")
+				.form-account__input-error
+			label.form-account__label
+				input.form-account__inputs-input(type="text" placeholder="Repeat password" name="re-password")
+				.form-account__input-error
+			.form-account__send-button
+				button.form-account__send-button-btn(type="submit") 
+					.form-account__send-button-btn-text Create
+					.form-account__send-button-btn-icon
+						+icon("arrow-right", "form-account__send-button-btn-icon-pic")
+				.form-account__input-error.form-account__input-error--server Something went wrong. Refresh the page and try again

@@ -2,4 +2,4 @@ include ../../common/mixins.pug
 
 section.mobiles-manual
 	.mobiles-manual__container.container
-		iframe(class="mobiles-manual__frame" src='https://www.youtube.com/embed/gN14e5uajxw', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+		iframe(class="mobiles-manual__frame" src='https://www.youtube.com/embed/gN14e5uajxw', frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='', onclick=`gtag('event', 'click', {'event_category': "mobile_manual",'event_label': "play_manual"})`)

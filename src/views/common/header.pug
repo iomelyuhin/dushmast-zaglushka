@@ -51,7 +51,11 @@ header.header
 								a.langs__item-link(href="/pt" data-lang="Pt") Português
 							li.langs__item
 								a.langs__item-link(href="/ru" data-lang="Ru") Русский
-					a.header__user-menu-login(href="https://dashboard.rekk.io/login")
+							li.langs__item
+								a.langs__item-link(href="/fr" data-lang="Fr") Français
+							li.langs__item
+								a.langs__item-link(href="/de" data-lang="De") Deutsche
+					a.header__user-menu-login(href="https://dashboard.rekk.io/login" onclick=`gtag('event', 'click', {'event_category': 'header','event_label': 'login'})`)
 						+icon("user", "header__user-menu-login-icon")
 						.header__user-menu-login-text <?=Yii::t('app', 'Login')?>
 			//- hamburger-menu

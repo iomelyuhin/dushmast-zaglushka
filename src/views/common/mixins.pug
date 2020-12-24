@@ -2,17 +2,17 @@ mixin icon(name, mod)
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="/assets/img/sprite.svg#" + name)
 
-mixin appleBtn(mod, text)
-	a.apple-btn(class="apple-btn--"+mod type="button" href="https://apps.apple.com/us/app/rekk-call-recording/id1475739728")
+mixin appleBtn(mod, text, e_cat, e_action)
+	a.apple-btn(class=`apple-btn--${+mod} ${e_cat}--${e_action}` e_cattype="button" href="https://apps.apple.com/us/app/rekk-call-recording/id1475739728" onclick=`gtag('event', 'click', {'event_category': '${e_cat}','event_label': '${e_action}'})`)
 		+icon("apple", "apple-btn__icon")
 		.apple-btn__text=text
 mixin pcBtn(mod, text, link)
 	a.pc-btn(class=`pc-btn--${mod}` href=link)
 		+icon("win", "pc-btn__icon")
 		.pc-btn__text=text
-mixin recBtn(mod, text, desc, href, icon)
+mixin recBtn(mod, text, desc, href, icon, e_cat, e_action)
 	.rec-btn(class=`rec-btn--${mod}`)
-		a.rec-btn__btn(class=`${mod}-cta` href=href)
+		a.rec-btn__btn(class=`${mod}-cta` href=href onclick=`gtag('event', 'click', {'event_category': '${e_cat}','event_label': '${e_action}'})`)
 			+icon(icon, "rec-btn__icon")
 			.rec-btn__text!=text
 		.rec-btn__desc=desc

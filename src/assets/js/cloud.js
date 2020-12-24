@@ -31,16 +31,16 @@ document.addEventListener(`DOMContentLoaded`, function () {
   //! Конец анимации
 
   const btnImgArr = document.querySelectorAll(".screenshots__item-img-btn");
-  const body = document.querySelector("body");
 
   btnImgArr.forEach((img) => {
     let fakeImg = img.lastChild.lastChild;
     img.addEventListener("click", (e) => {
+			btnImgArr.forEach((img) => {
+				img.lastChild.lastChild.classList.remove("zoom");
+			});
       if (!fakeImg.classList.contains("zoom")) {
-        body.style.overflow = "hidden";
         fakeImg.classList.add("zoom");
       } else {
-        body.style.overflow = "initial";
         fakeImg.classList.remove("zoom");
       }
     });
@@ -50,7 +50,6 @@ document.addEventListener(`DOMContentLoaded`, function () {
       !e.target.classList.contains("screenshots__item-image") &&
       !e.target.classList.contains("screenshots__item-fake")
     ) {
-      body.style.overflow = "initial";
       btnImgArr.forEach((img) => {
         let fakeImg = img.lastChild.lastChild;
         fakeImg.classList.remove("zoom");

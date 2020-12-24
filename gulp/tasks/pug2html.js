@@ -13,11 +13,11 @@ module.exports = function pug2html() {
     gulp
       .src("src/views/pages/**/*.pug")
       .pipe(plumber())
-      .pipe(pugLinter({ reporter: "default" }))
+      // .pipe(pugLinter({ reporter: "default" }))
       .pipe(pug())
 			.pipe(webpHTML())
-      .pipe(htmlValidator())
-      .pipe(bemValidator())
+      // .pipe(htmlValidator())
+      // .pipe(bemValidator())
       .pipe(replace("&gt;", ">"))
       .pipe(replace("&lt;", "<"))
       // .pipe(rename(function (path) {

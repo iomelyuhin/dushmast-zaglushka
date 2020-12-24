@@ -76,9 +76,9 @@ document.addEventListener(`DOMContentLoaded`, function () {
         burger.classList.remove("is-active");
         body.style.overflow = "initial";
       } else {
+        body.style.overflow = "hidden";
         mainMenu.classList.add("active");
         burger.classList.add("is-active");
-        body.style.overflow = "hidden";
       }
     });
   }
