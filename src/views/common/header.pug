@@ -10,13 +10,26 @@ header.header
 				ul.header__main-menu
 					li.header__main-menu-item.header__main-menu-item--title <?=Yii::t('app', 'Menu')?>
 					li.header__main-menu-item
-						<?=yii\helpers\Html::a(Yii::t('app', 'For mobiles'), ['/mobile'], ['class'=>'header__main-menu-item-link'])?>
-					li.header__main-menu-item
-						<?=yii\helpers\Html::a(Yii::t('app', 'For Mac'), ['/mac'], ['class'=>'header__main-menu-item-link'])?>
+						button.header__main-menu-item-link.header__main-menu-item-link--submenu(type="button") <?=Yii::t('app', 'REKK Call Recorder')?>
+						ul.submenu
+							li.submenu__item
+								<?=yii\helpers\Html::a(Yii::t('app', 'For mobiles'), ['/mobile'], ['class'=>'submenu__item-link'])?>
+							li.submenu__item
+								<?=yii\helpers\Html::a(Yii::t('app', 'For Mac'), ['/mac'], ['class'=>'submenu__item-link'])?>
+							li.submenu__item
+								<?=yii\helpers\Html::a(Yii::t('app', 'Without an app'), ['/cloud'],['class'=>'submenu__item-link'])?>
+							
 					//- li.header__main-menu-item
-					//- 	<?=yii\helpers\Html::a(Yii::t('app', 'For Windows'), ['/desktop'], ['class'=>'header__main-menu-item-link'])?>
+					//- 	<?=yii\helpers\Html::a(Yii::t('app', 'For mobiles'), ['/mobile'], ['class'=>'header__main-menu-item-link'])?>
+					//- li.header__main-menu-item
+					//- 	<?=yii\helpers\Html::a(Yii::t('app', 'For Mac'), ['/mac'], ['class'=>'header__main-menu-item-link'])?>
+					//- //- li.header__main-menu-item
+					//- //- 	<?=yii\helpers\Html::a(Yii::t('app', 'For Windows'), ['/desktop'], ['class'=>'header__main-menu-item-link'])?>
+					//- li.header__main-menu-item
+					//- 	<?=yii\helpers\Html::a(Yii::t('app', 'Without an app'), ['/cloud'], ['class'=>'header__main-menu-item-link'])?>
 					li.header__main-menu-item
-						<?=yii\helpers\Html::a(Yii::t('app', 'Without an app'), ['/cloud'], ['class'=>'header__main-menu-item-link'])?>
+						//- .header__main-menu-item-link.badge-for-ios REKK Voice Recorder
+						<?=yii\helpers\Html::a(Yii::t('app', 'REKK Voice Recorder'), ['/voicerecorder'], ['class'=>'header__main-menu-item-link badge-for-ios'])?>
 					li.header__main-menu-item
 						button.header__main-menu-item-link.header__main-menu-item-link--submenu(type="button") <?=Yii::t('app', 'Information')?>
 						ul.submenu
