@@ -55,7 +55,8 @@
 	}
 }
 
-.features__item-icon--rocket {
+.features__item-icon--rocket,
+.features__item-icon--secure {
 	width: 36px;
 	height: 56px;
 	stroke: #FD8A3F;
@@ -117,6 +118,13 @@
 	height: 36px;
 	fill: none;
 	stroke: #FD8A3F;
+}
+.features__item-icon--feather {
+	width: 40px;
+	height: 36px;
+	fill: none;
+	stroke: #37B4FB;
+	transform: rotate(-90deg);
 }
 .features__item-icon--feather {
 	width: 40px;

@@ -10,14 +10,17 @@ header.header
 				ul.header__main-menu
 					li.header__main-menu-item.header__main-menu-item--title <?=Yii::t('app', 'Menu')?>
 					li.header__main-menu-item
-						button.header__main-menu-item-link.header__main-menu-item-link--submenu(type="button") <?=Yii::t('app', 'REKK Call Recorder')?>
+						button.header__main-menu-item-link.header__main-menu-item-link--apps(type="button") <?=Yii::t('app', 'Applications')?>
 						ul.submenu
 							li.submenu__item
-								<?=yii\helpers\Html::a(Yii::t('app', 'For mobiles'), ['/mobile'], ['class'=>'submenu__item-link'])?>
+								.submenu__item-title <?=yii\helpers\Html::a(Yii::t('app', 'Call Recorder for mobiles'), ['/mobile'], ['class'=>'submenu__item-link'])?>
+								.submenu__item-description <?=yii\helpers\Html::a(Yii::t('app', 'iOS & Android apps for phone call recording'), ['/mobile'], ['class'=>'submenu__item-link'])?>
 							li.submenu__item
-								<?=yii\helpers\Html::a(Yii::t('app', 'For Mac'), ['/mac'], ['class'=>'submenu__item-link'])?>
+								.submenu__item-title <?=yii\helpers\Html::a(Yii::t('app', 'Call Recorder for Mac'), ['/mac'], ['class'=>'submenu__item-link'])?>
+								.submenu__item-description <?=yii\helpers\Html::a(Yii::t('app', 'Mac application for recording calls made with IMs'), ['/mac'], ['class'=>'submenu__item-link'])?>
 							li.submenu__item
-								<?=yii\helpers\Html::a(Yii::t('app', 'Without an app'), ['/cloud'],['class'=>'submenu__item-link'])?>
+								.submenu__item-title <?=yii\helpers\Html::a(Yii::t('app', 'Voice Recorder'), ['/voicerecorder'],['class'=>'submenu__item-link badge-for-ios'])?>
+								.submenu__item-description <?=yii\helpers\Html::a(Yii::t('app', 'iOS application for voice recording & speech transcription'), ['/voicerecorder'], ['class'=>'submenu__item-link'])?>
 							
 					//- li.header__main-menu-item
 					//- 	<?=yii\helpers\Html::a(Yii::t('app', 'For mobiles'), ['/mobile'], ['class'=>'header__main-menu-item-link'])?>
@@ -29,7 +32,7 @@ header.header
 					//- 	<?=yii\helpers\Html::a(Yii::t('app', 'Without an app'), ['/cloud'], ['class'=>'header__main-menu-item-link'])?>
 					li.header__main-menu-item
 						//- .header__main-menu-item-link.badge-for-ios REKK Voice Recorder
-						<?=yii\helpers\Html::a(Yii::t('app', 'REKK Voice Recorder'), ['/voicerecorder'], ['class'=>'header__main-menu-item-link badge-for-ios'])?>
+						<?=yii\helpers\Html::a(Yii::t('app', 'Without an app'), ['/cloud'], ['class'=>'header__main-menu-item-link'])?>
 					li.header__main-menu-item
 						button.header__main-menu-item-link.header__main-menu-item-link--submenu(type="button") <?=Yii::t('app', 'Information')?>
 						ul.submenu

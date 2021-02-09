@@ -12,7 +12,7 @@ module.exports = function pug2htmlYii() {
     gulp
       .src("src/views/pages/blog/*.pug")
       .pipe(plumber())
-      .pipe(pugLinter({ reporter: "default" }))
+      // .pipe(pugLinter({ reporter: "default" }))
       .pipe(pug())
       // .pipe(htmlValidator())
       // .pipe(bemValidator())

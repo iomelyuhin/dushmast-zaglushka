@@ -4,19 +4,28 @@ document.addEventListener(`DOMContentLoaded`, function () {
   //!================================================================
 
   //?=========================================
+  //?=====ременные для подменю applications===
+  //?=========================================
+  const appmenuBtn = document.querySelector(
+    ".header__main-menu-item-link--apps"
+  );
+  const appmenuList = appmenuBtn.nextSibling;
+	const appList = appmenuBtn.parentNode;
+	
+  //?=========================================
   //?=====переменные для подменю info=========
   //?=========================================
   const submenuBtn = document.querySelector(
     ".header__main-menu-item-link--submenu"
   );
-  const submenuList = document.querySelector(".submenu");
+  const submenuList = submenuBtn.nextSibling;
   const curList = submenuBtn.parentNode;
 
   //?========================================
   //?=====переменные для меню языков=========
   //?========================================
-  const langBtn = document.querySelector(".langs__btn");
-  const langSubmenuList = document.querySelector(".langs__list");
+	const langBtn = document.querySelector(".langs__btn");
+	const langSubmenuList = langBtn.nextSibling;
   const langList = langBtn.parentNode;
 
   //?====================================
@@ -56,6 +65,7 @@ document.addEventListener(`DOMContentLoaded`, function () {
   //!==========================================
   //!=========запускаем функции меню===========
   //!==========================================
+  openMenu(appmenuBtn, appList, appmenuList);
   openMenu(submenuBtn, curList, submenuList);
   openMenu(langBtn, langList, langSubmenuList);
 

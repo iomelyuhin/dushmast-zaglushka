@@ -1,0 +1,32 @@
+include ../../common/mixins.pug
+-
+	var featList = [
+		{
+			title: "<?=Yii::t('app', 'Reliability')?>",
+			desc: "<?=Yii::t('app', 'Unlike other voice recorders, REKK guarantees recording in the background and high quality of every recording.')?>",
+			icon: "secure"
+		},
+		{
+			title: "<?=Yii::t('app', 'Flexible Settings')?>",
+			desc: "<?=Yii::t('app', 'You can choose the quality of recording and file format yourself according to your needs.')?>",
+			icon: "mobile"
+		},
+		{
+			title: "<?=Yii::t('app', 'Easy-to-use')?>",
+			desc: "<?=Yii::t('app', 'You don’t need to be tech-savvy to use the application. Voice recording with REKK is smooth and simple.')?>",
+			icon: "feather"
+		}
+	]
+section.features
+	.features__container.container
+		h2.features__title <?=Yii::t('app', 'Advantages ')?>
+		ul.features__list
+			each item in featList
+				li.features__item
+					.features__item-img
+						+icon(item.icon, `features__item-icon features__item-icon--${item.icon}`)
+					h3.features__item-title=item.title
+					.features__item-desc.desc=item.desc
+		.features__buttons
+			.features__btn
+				+appleBtn("features", "<?=Yii::t('app', 'DOWNLOAD FOR IPHONE')?>", "mobile_advantages", "dwnld_appstore_voice")

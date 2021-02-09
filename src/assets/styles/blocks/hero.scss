@@ -10,6 +10,17 @@
 	
 }
 
+.hero--voicerecorder {
+	.mainhero__desc {
+		justify-content: flex-start;
+	}
+
+	.hero__image-wrap {
+		width: 124%;
+    left: 5%;
+	}
+}
+
 .hero__container {
   display: flex;
   // width: 100%;

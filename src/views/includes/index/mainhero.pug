@@ -15,7 +15,7 @@ section.mainhero
 							li.mainhero__item-item <?=Yii::t('app', 'create backup copies of your records')?>
 							li.mainhero__item-item <?=Yii::t('app', 'use a smart search feature to find the necessary info with ease')?>
 					.mainhero__item-button
-						a.mainhero__item-link(href="/mobile" onclick="gtag('event', 'click', {'event_category': 'main_mobile','event_label': 'learn_more'})") <?=Yii::t('app', 'LEARN MORE')?>
+						<?=yii\helpers\Html::a(Yii::t('app', 'LEARN MORE'), ['/mobile'], ['class'=>'mainhero__item-link', 'onclick'=>'gtag(\'event\', \'click\', {\'event_category\': \'main_mobile\',\'event_label\': \'learn_more\'})', 'aria-label'=>'Learn more'])?>
 			li.mainhero__item
 				.mainhero__item-wrap-link
 					.mainhero__item-text
@@ -26,7 +26,8 @@ section.mainhero
 							li.mainhero__item-item <?=Yii::t('app', 'download your recorded calls in the highest quality')?>
 							li.mainhero__item-item <?=Yii::t('app', 'make notes near your records')?>
 					.mainhero__item-button
-						a.mainhero__item-link(href="/mac" aria-label="Learn more" onclick="gtag('event', 'click', {'event_category': 'main_mac','event_label': 'learn_more'})") <?=Yii::t('app', 'LEARN MORE')?>
+						<?=yii\helpers\Html::a(Yii::t('app', 'LEARN MORE'), ['/mac'], ['class'=>'mainhero__item-link', 'onclick'=>'gtag(\'event\', \'click\', {\'event_category\': \'main_mac\',\'event_label\': \'learn_more\'})', 'aria-label'=>'Learn more'])?>
+
 			li.mainhero__item
 				.mainhero__item-wrap-link
 					.mainhero__item-text
@@ -39,6 +40,6 @@ section.mainhero
 							li.mainhero__item-item <?=Yii::t('app', 'automatical transcription of phone calls')?>
 					.mainhero__item-button-wrap
 						.mainhero__item-button
-							a.mainhero__item-link(href="/cloud" aria-label="Learn more" onclick="gtag('event', 'click', {'event_category': 'main_mdashboard','event_label': 'learn_more'})") <?=Yii::t('app', 'LEARN MORE')?>
+							<?=yii\helpers\Html::a(Yii::t('app', 'LEARN MORE'), ['/cloud'], ['class'=>'mainhero__item-link', 'onclick'=>'gtag(\'event\', \'click\', {\'event_category\': \'main_mdashboard\',\'event_label\': \'learn_more\'})', 'aria-label'=>'Learn more'])?>
 						.mainhero__item-button.mainhero__item-button--sign
 							a.mainhero__item-link(href="https://dashboard.rekk.io/register" aria-label="Sign up" onclick="gtag('event', 'click', {'event_category': 'main_mdashboard','event_label': 'free_register'})") <?=Yii::t('app', 'Sign up for FREE')?>

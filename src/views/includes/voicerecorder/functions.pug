@@ -1,0 +1,46 @@
+include ../../common/mixins.pug
+-
+	var funcList = [
+		{
+			img: "voice-feat-01",
+			title: "<?=Yii::t('app', 'Easy voice recording')?>",
+			desc: "<?=Yii::t('app', 'Make voice notes on your iPhone with a few taps, save all recordings in one place and play recorded audio files as soon as you stop recording.')?>"
+		},
+		{
+			img: "voice-feat-03",
+			title: "<?=Yii::t('app', 'Multiple file formats')?>",
+			desc: "<?=Yii::t('app', 'Save your recordings in any of available formats (AIFF, MP4, M4A, WAV)')?>"
+		},
+		{
+			img: "voice-feat-05",
+			title: "<?=Yii::t('app', 'Speech transcription')?>",
+			desc: "<?=Yii::t('app', 'Convert your voice notes to text with a powerful speech-to-text feature. Note that the accuracy of transcription depends on the speech tempo and accent.')?>"
+		},
+		{
+			img: "voice-feat-04",
+			title: "<?=Yii::t('app', 'Convenient file manager')?>",
+			desc: "<?=Yii::t('app', 'In REKK Voice Recorder, you can access all records in one menu, add text notes to your recordings, rename your voice notes and delete unnecessary records. ')?>"
+		},
+		{
+			img: "voice-feat-01",
+			title: "<?=Yii::t('app', 'Recording in the background')?>",
+			desc: "<?=Yii::t('app', 'Unlike many other voice recorders for iPhone, REKK keeps recording surrounding sounds even if the screen is locked.')?>"
+		},
+		{
+			img: "voice-feat-02",
+			title: "<?=Yii::t('app', 'File sharing')?>",
+			desc: "<?=Yii::t('app', 'REKK allows you to share recorded audio files with your acquaintances through 3rd party apps (Twitter, Viber, Whatsapp, Telegram, Facebook, iMessage, etc.). It’s also possible to share your transcription with colleagues in the pdf & text formats.')?>"
+		}
+	]
+
+section.functions
+	.functions__container.container
+		h2.functions__title <?=Yii::t('app', 'Features ')?>
+		ul.functions__list
+			each item in funcList
+				li.functions__item
+					.functions__item-image
+						+image(`content/${item.img}`, "png", "functions__item-img")
+						//- img.functions__item-img(src=`/assets/img/content/${item.img}`)
+					.functions__item-title=item.title
+					.functions__item-desc=item.desc
