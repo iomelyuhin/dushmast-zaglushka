@@ -1,6 +1,5 @@
 const gulp = require('gulp')
 
-const imageMinify = require('./imageMinify')
 const imageToWebp = require('./imageToWebp')
 const svgSprite = require('./svgSprite')
 const stylesDev = require('./styles')

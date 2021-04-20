@@ -1,0 +1,13 @@
+extends ../common/layout
+
+block variables
+	-var title = "Smart Call Blocker For Mobile"
+
+block content
+	include ../includes/call-blocker/hero.pug
+	include ../includes/call-blocker/functions.pug
+	include ../includes/call-blocker/features.pug
+	include ../includes/call-blocker/manual.pug
+
+block scripts
+	script(src="/assets/js/mobile.min.js")

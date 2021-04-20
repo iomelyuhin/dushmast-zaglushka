@@ -1,0 +1,34 @@
+include ../../common/mixins.pug
+-
+	var featList = [
+		{
+			title: "<?=Yii::t('app', 'Availability')?>",
+			desc: "<?=Yii::t('app', 'REKK call recording applications are available on the AppStore and Play Market.')?>",
+			icon: "rocket"
+		},
+		{
+			title: "<?=Yii::t('app', 'No limits')?>",
+			desc: "<?=Yii::t('app', 'With REKK, you can record as many calls as you need.')?>",
+			icon: "infinity"
+		},
+		{
+			title: "<?=Yii::t('app', 'Backup')?>",
+			desc: "<?=Yii::t('app', 'REKK lets you create backup copies of your recorded calls.')?>",
+			icon: "mobile"
+		}
+	]
+section.features
+	.features__container.container
+		h2.features__title <?=Yii::t('app', 'Advantages')?>
+		ul.features__list
+			each item in featList
+				li.features__item
+					.features__item-img
+						+icon(item.icon, `features__item-icon features__item-icon--${item.icon}`)
+					h3.features__item-title=item.title
+					.features__item-desc.desc=item.desc
+		.features__buttons
+			.features__btn
+				+appleBtn("features", "<?=Yii::t('app', 'Download on AppStore')?>", "mobile_advantages", "dwnld_appstore")
+			.features__btn
+				+recBtn("features", "<?=Yii::t('app', 'Download on Google Play')?>", "", "https://play.google.com/store/apps/details?id=rekk.call.recorder", "android", "mobile_advantages", "dwnld_googleplay")
