@@ -2,19 +2,19 @@ include ../../common/mixins.pug
 -
 	var featList = [
 		{
-			title: "<?=Yii::t('app', 'Availability')?>",
-			desc: "<?=Yii::t('app', 'REKK call recording applications are available on the AppStore and Play Market.')?>",
-			icon: "rocket"
+			title: "<?=Yii::t('app', 'Privacy')?>",
+			desc: "<?=Yii::t('app', 'The application doesn’t collect your personal data.')?>",
+			icon: "secure"
 		},
 		{
 			title: "<?=Yii::t('app', 'No limits')?>",
-			desc: "<?=Yii::t('app', 'With REKK, you can record as many calls as you need.')?>",
+			desc: "<?=Yii::t('app', 'There are no limits on the number of blocked phone calls and messages in REKK.')?>",
 			icon: "infinity"
 		},
 		{
-			title: "<?=Yii::t('app', 'Backup')?>",
-			desc: "<?=Yii::t('app', 'REKK lets you create backup copies of your recorded calls.')?>",
-			icon: "mobile"
+			title: "<?=Yii::t('app', 'Absence of Notifications')?>",
+			desc: "<?=Yii::t('app', 'The application doesn’t notify the caller that they are blocked.')?>",
+			icon: "anonim"
 		}
 	]
 section.features
@@ -30,5 +30,3 @@ section.features
 		.features__buttons
 			.features__btn
 				+appleBtn("features", "<?=Yii::t('app', 'Download on AppStore')?>", "mobile_advantages", "dwnld_appstore")
-			.features__btn
-				+recBtn("features", "<?=Yii::t('app', 'Download on Google Play')?>", "", "https://play.google.com/store/apps/details?id=rekk.call.recorder", "android", "mobile_advantages", "dwnld_googleplay")

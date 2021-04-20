@@ -1,20 +1,20 @@
 include ../../common/mixins.pug
-
-section.hero
+section.hero.hero--blocker
 	.hero__container.container
 		.hero__text-content
-			h1.hero__title Call blocker
-			.hero__desc.desc <?=Yii::t('app', 'Record all incoming and outgoing phone calls and convert them to text with REKK application for iOS and Android')?>
+			h1.hero__title <?=Yii::t('app', 'REKK - Call Blocking')?>
+			.hero__desc.desc <?=Yii::t('app', 'Find out who is calling you before you pick up and block incoming calls from unwanted phone numbers.')?>
 			.hero__text-content-img
-				+image("/content/mob-hero-phones", "png", "hero__text-content-image animate__animated animate__headShake")
+				+image("/content/desktop-hero-blocker-mobiles", "png", "hero__text-content-image animate__animated animate__headShake")
 			.hero__buttons
-				.hero__btn
-					+appleBtn("hero", "<?=Yii::t('app', 'Download on AppStore')?>", "mobile_hero", "dwnld_appstore")
-				.hero__btn
-					+recBtn("playmarket", "<?=Yii::t('app', 'Download on Google Play')?>", "", "https://play.google.com/store/apps/details?id=rekk.call.recorder", "android", "mobile_hero", "dwnld_googleplay")
+				a.apple-btn(class="apple-btn--features" type="button" href="https://apps.apple.com/us/app/id1475739728#?platform=mac" target="_blank" onclick=`gtag('event', 'click', {'event_category': "mac_hero",'event_label': "dwnld_macos"})`)
+					+icon("apple", "apple-btn__icon")
+					.apple-btn__text <?=Yii::t('app', 'Download on AppStore')?>
+			.mainhero__desc.desc <?=Yii::t('app', 'Compatible with iOs 12 or later.')?>
+			
 		.hero__image
 			.hero__image-wrap
-				+image("content/main-hero", "png", "hero__image-img animate__animated animate__fadeInBottomLeft")
+				+image("content/desktop-hero-blocker", "png", "hero__image-img animate__animated animate__fadeInBottomLeft")
 				.hero__image-circle.hero__image-circle--violet.animate__animated.animate__zoomIn
 				.hero__image-circle.hero__image-circle--yellow.animate__animated.animate__zoomIn
 				.hero__image-circle.hero__image-circle--green.animate__animated.animate__zoomIn

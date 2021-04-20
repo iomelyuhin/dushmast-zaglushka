@@ -2,7 +2,7 @@ const gulp = require("gulp");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 
-module.exports = function imageMinify() {
+module.exports = function imageToWebpYii() {
   return gulp
     .src([
       "src/assets/img/content/**/*.{gif,png,jpg,svg,webp}",

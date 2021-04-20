@@ -178,3 +178,14 @@
 		height: 640px;
   }
 }
+
+
+.hero--blocker {
+  .hero__image-wrap {
+    width: 130%;
+    left: 0;
+  }
+  .mainhero__desc {
+    justify-content: flex-start;
+  }
+}
