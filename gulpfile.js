@@ -21,7 +21,6 @@ const imageToWebpYii = require("./gulp/tasks/imageToWebpYii.js");
 const clean = require("./gulp/tasks/clean");
 // const copyDependencies = require('./gulp/tasks/copyDependencies')
 const copyImages = require("./gulp/tasks/copyImages");
-const lighthouse = require("./gulp/tasks/lighthouse");
 const svgSprite = require("./gulp/tasks/svgSprite");
 const svgSpriteYii = require("./gulp/tasks/svgSpriteYii");
 
@@ -74,4 +73,3 @@ module.exports.build = build;
 module.exports.buildY = buildY;
 module.exports.buildYF = buildYF;
 
-module.exports.lighthouse = gulp.series(lighthouse);

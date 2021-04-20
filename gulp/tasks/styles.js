@@ -5,8 +5,7 @@ const cleanCSS = require("gulp-clean-css");
 const sourcemaps = require("gulp-sourcemaps");
 const shorthand = require("gulp-shorthand");
 const autoprefixer = require("gulp-autoprefixer");
-const gulpStylelint = require("gulp-stylelint");
-var pxtorem = require("gulp-pxtorem");
+const pxtorem = require("gulp-pxtorem");
 const sassGlob = require("gulp-sass-glob");
 const rename = require("gulp-rename");
 
@@ -15,17 +14,6 @@ module.exports = function styles() {
     .src("src/assets/styles/style.scss")
     .pipe(sassGlob())
     .pipe(plumber())
-    .pipe(
-      gulpStylelint({
-        failAfterError: false,
-        reporters: [
-          {
-            formatter: "string",
-            console: true,
-          },
-        ],
-      })
-    )
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(
