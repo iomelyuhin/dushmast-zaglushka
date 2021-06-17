@@ -1,29 +1,27 @@
-include ../../common/mixins.pug
-
 section.faq
   .container
-    h1 Как пользоваться REKK - блокировка звонков
-    h3 1.	Я установил REKK. С чего начать?
-    p Для полного функционирования приложения необходимо включить определитель спам номеров и определитель СМС-сообщений.
-    h3 Как включить определитель спам номеров?
-    p Откройте «Настройки» на iPhone > выберите «Телефон» > перейдите в «Блок. и идентиф. Вызова» > активируйте REKK.
-    h3 Как включить определитель СМС-сообщений?
-    p Откройте «Настройки» на iPhone > выберите пункт «Сообщение» > откройте пункт «Неизвестные и спам» > активируйте REKK.
-    p Теперь REKK может автоматически определять абонента по номеру телефона и блокировать спам звонки и сообщения.
-    h3 2.	Как заблокировать звонки от всех спам номеров?
-    p Откройте REKK > выберите «Настройки» в правом нижнем углу экрана > выберите пункт «Спам звонки» в разделе общее > включите опцию «Блокировать».
-    h3 3.	Как заблокировать звонки от определенного номера?
-    p Откройте REKK > выберите «Блок. номера» в нижней части экрана > нажмите «Добавить» в правом верхнем углу > введите номер телефона и нажмите «ОК». Теперь Вы не будете получать входящие звонки от этого абонента.
-    h3 4.	Как разблокировать звонки от определенного номера?
-    p Откройте REKK > выберите «Блок. номера» в нижней части экрана > выберите номер из списка > нажмите «Разблокировать номер».
-    h3 5.	Как заблокировать сообщения от нежелательного абонента?
-    p Откройте REKK > выберите «СМС» в нижней части экрана > нажмите «Добавить» в правом верхнем углу > «По номеру телефона» > введите номер телефона и нажмите «ОК».
-    h3 6.	Как заблокировать все входящие сообщения со словом «распродажа»?
-    p Откройте REKK > выберите «СМС» в нижней части экрана > нажмите «Добавить» в правом верхнем углу > «По ключевому слову» > напишите «Распродажа» в поле и нажмите «ОК». Вы можете заблокировать входящие сообщения по любому ключевому слову, например “опрос”, “скидка”, “предложение”, “кредит”, и т. д.
-    h3 7.	Не определяется номер телефона при входящем звонке. Как исправить?
-    p Если у Вас возникли проблемы с определителем номера при входящем звонке, рекомендуем сбросить настройки определителя и обновить базу номеров. Для этого откройте REKK > выберите «Настройки» в правом нижнем углу экрана > выберите «Определитель» > нажмите «Сбросить» и дождитесь сообщение об успешном сбросе настроек.
-    p Затем откройте приложение > выберите «Определитель» внизу экрана > нажмите «Обновить» в правом верхнем углу.
-    h3 8.	При попытке сбросить настройки определителя номеров возникает ошибка. Что это значит и как исправить проблему?
-    p Если при попытке сброса настроек возникает ошибка, это значит, что недавно Вы обновили базу номеров и процесс ее загрузки в приложение еще не завершен. Обновление базы номеров может занять до 30 минут. В этом случае Вам необходимо подождать некоторое время и повторить попытку сброса.
-    h3 9.	Как обновить базу спам номеров?
-    p Мы постоянно собираем новые данные о спам номерах из разных источников и пополняем базу номеров в приложении. На данный момент в базе зарегистрировано более полутора миллионов номеров. Не забывайте периодически обновлять базу номеров в приложении для точного определения спама. Чтобы обновить базу номеров, откройте приложение > выберите «Определитель» внизу экрана > нажмите «Обновить» в правом верхнем углу.
+    h1 <?=Yii::t('app', 'How to use REKK Call Blocker for iPhone?')?>
+    h3 <?=Yii::t('app', 'I installed REKK. Where do I start? ')?>
+    p <?=Yii::t('app', 'You should enable spam number and SMS identification for the full functioning of the program.')?>
+    h3 <?=Yii::t('app', 'How to enable spam number identification?')?>
+    p <?=Yii::t('app', 'Open iPhone Settings > select “Phone” > go to “Call Blocking & Identification” > enable REKK.')?>
+    h3 <?=Yii::t('app', 'How to enable SMS identifier?')?>
+    p <?=Yii::t('app', 'Open iPhone Settings > select “Messages” > open “Unknown and spam” > enable REKK.')?>
+    p <?=Yii::t('app', 'Now REKK can automatically identify spam and block unwanted messages and calls.')?>
+    h3 <?=Yii::t('app', 'How to block calls from all spam numbers?')?>
+    p <?=Yii::t('app', 'Open REKK > select “Settings” in the lower right corner > select “Spam calls” in the General section > enable “Block”.')?>
+    h3 <?=Yii::t('app', 'How to block calls from a specific phone number?')?>
+    p <?=Yii::t('app', 'Open REKK > select "Call blocking" at the bottom of the screen > tap "Add" in the upper right corner > enter the unwanted phone number and select "OK". Now you won\'t get phone calls from this unwanted caller.')?>
+    h3 <?=Yii::t('app', 'How to unblock from a specific phone number?')?>
+    p <?=Yii::t('app', 'Open REKK > select "Call blocking" at the bottom of the screen > select the number from the list > press "Unblock".')?>
+    h3 <?=Yii::t('app', 'How to block messages from an unwanted number?')?>
+    p <?=Yii::t('app', 'Open REKK > select SMS at the bottom of the screen > tap "Add" in the upper right corner > select "By the phone number"> enter the phone number and press "OK".')?>
+    h3 <?=Yii::t('app', 'How to block all incoming text messages with the word "sale"?')?>
+    p <?=Yii::t('app', 'Open REKK > select "SMS" at the bottom of the screen > tap "Add" in the upper right corner > select "By the keyword"> enter "sale" and tap "OK". You can block incoming messages with any keywords, for example, "survey", "discount", "offer", etc.')?>
+    h3 <?=Yii::t('app', 'The app doesn\'t identify the number during an incoming call. How to fix it?')?>
+    p <?=Yii::t('app', 'If you have any issues with the caller identification, it is recommended to reset the identification settings and update the phone number database. To do it, open REKK > select "Settings" in the lower right corner > select "Identification"> tap "Reset" and wait for the "Completed" message.')?>
+    p <?=Yii::t('app', 'Then open the application > select "Identification" at the bottom of the screen > tap "Update" in the upper right corner.')?>
+    h3 <?=Yii::t('app', 'When I try to reset the identification settings, an error occurs. What does it mean, and how can I fix it?')?>
+    p <?=Yii::t('app', 'If an error occurs when you try to reset the identification settings, it means that you\'ve recently updated the database, and the upload process is not finished yet. Updating the database can take up to 30 minutes. Please wait and reset the identification settings later.')?>
+    h3 <?=Yii::t('app', 'How to update the phone number database?')?>
+    p <?=Yii::t('app', 'We constantly monitor multiple sources with user reports to spam and add new unwanted numbers to the database. More than 1.5 million phone numbers have been already registered in the database. Please update the database regularly for accurate spam identification. To update the database, open the app > select "Identification" at the bottom of the screen > tap "Update" in the upper right corner.')?>
